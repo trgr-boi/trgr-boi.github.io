@@ -100,7 +100,7 @@
         appendOutput('depo', 'color1');
         appendOutput(' - go to Github page.<br>');
         appendOutput('music', 'color1');
-        appendOutput(' - listen to my music.<br>');
+        appendOutput(' - open music program.<br>');
         appendOutput('files', 'color1');
         appendOutput(' - browse local files.<br>');
         appendOutput('help', 'color1');
