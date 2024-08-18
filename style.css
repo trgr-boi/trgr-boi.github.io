@@ -1,0 +1,464 @@
+body {
+    font-family: monospace;
+    background-color: #040D12;
+    color: #93B1A6;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Disable vertical (and horizontal) scrolling */
+}
+hr {
+    height: 2px;
+    background-color: #ccebe0;
+    border: none;
+    margin: 10px 0;
+}
+
+#terminal {
+    width: 590px;
+    height: calc(100vh - 90px);
+    margin: 20px;
+    border: 2px solid #ccebe0;
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 590px; 
+}
+
+#terminal-big {
+    width: calc(100vw - 90px);
+    height: calc(100vh - 90px);
+    margin: 20px 0;
+    border: 2px solid #ccebe0;
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 590px; 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.text {
+    margin-top: 20px;
+    border: 2px solid #93B1A6;
+    border-radius: 10px;
+    padding: 10px;
+    height: calc(100vh - 265px);
+    overflow: auto;
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+#output {
+    overflow-y: auto;
+    padding-bottom: 0px;
+}
+
+#input-container {
+    display: flex;
+}
+
+/* text area */
+.text-container {
+    background-color: #040D12;
+    font-family: monospace;
+    font-size: 13px;
+    color: #5C8374;
+    width: 370px;
+    outline: none;
+    border: none;
+    margin-top: -3px;
+}
+
+/* text next to text area */
+#input-container span {
+    margin-right: 1px;
+    color: #5C8374;
+}
+
+/* Brighter text*/
+.color1{
+    color: #872341;
+}
+
+/* Darker text*/
+.color2{ 
+    color: #183D3D;
+}
+
+#ascii-art {
+    font-family: monospace;
+    text-shadow: 0 0 20px #93B1A6;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid #ccebe0;
+}
+    .column-logo {
+        flex: 7;
+        box-sizing: border-box;
+        padding-right: 25px;
+    }
+
+    .column-menu {
+        flex: 13;
+        box-sizing: border-box;
+        border-left: 2px solid #ccebe0;
+        padding-left: 25px;
+        padding-top: 5px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+        .column-menu nav {
+            width: 100%;
+        }
+        
+        .column-menu nav ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0;
+            margin: 0;
+            display: flex; /* Arrange list items in a horizontal row */
+            justify-content: center;
+            width: 100%;
+        }
+
+        .column-menu nav ul li {
+            margin: 0 5px; /* Add spacing between the list items */
+        }
+
+        .column-menu nav ul li a {
+            text-decoration: none; /* Remove underline from links */
+            color: #5C8374;
+            font-weight: regular;
+            padding: 10px 15px;
+            text-align: center;
+            transition: color 0.3s;
+
+        }
+
+        .column-menu nav ul li a:hover {
+            color: #872341;
+        }
+
+        /* Popup overlay */
+            .popup-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.8);
+                display: none;
+                justify-content: center;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            /* Popup content */
+            .popup-content {
+                background: #212121;
+                border: 2px solid #ccebe0;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                color: #93B1A6;
+            }
+
+            .popup-content-about {
+                background: #212121;
+                border: 2px solid #ccebe0;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: left;
+                color: #93B1A6;
+            }
+
+            .popup-content h3 {
+                margin: 0 0 20px 0;
+            }
+
+            .store-link {
+                display: block;
+                margin: 10px 0;
+                color: #ccebe0;
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .store-link:hover {
+                color: #872341;
+            }
+
+            .close-popup {
+                background-color: #212121;
+                border: none;
+                color: #ccebe0;
+                padding: 10px 20px;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-top: 20px;
+                transition: color 0.3s;
+            }
+
+            .close-popup:hover {
+                color: #872341;
+            }
+
+
+    .announcements {
+        width: 100%;
+        height: 50px;
+        margin: 13px 0 0 0;
+        
+        font-weight: regular;
+        text-shadow: 0 0 20px #93B1A6;
+        border: 2px solid #93B1A6;
+        background-color: #212121;
+        border-radius: 10px;
+
+        overflow: hidden; /* Hide any overflow outside the container */
+        white-space: nowrap; /* Prevent line breaks in the text */
+
+    }
+        
+        .announcement-content {
+            display: inline-block;
+            padding-left: 100%; /* Start the text outside the container on the right */
+            animation: scroll-left 10s linear infinite; /* Scroll animation */
+        }
+        
+        @keyframes scroll-left {
+            from {
+                transform: translateX(0); /* Start at the beginning */
+            }
+            to {
+                transform: translateX(-100%); /* Move to the left by 100% of the width */
+            }
+        }
+
+.main-page {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+    
+    .column-2-left {
+        flex: 6;
+        box-sizing: border-box;
+        overflow-y: auto; /* Enable vertical scrolling if content overflows */
+
+        padding-right: 25px;
+        border-right: 2px solid #ccebe0;
+        height: calc(100vh - 236px);
+
+    }
+
+        .album {
+            cursor: pointer;
+            color: #93B1A6;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+            padding: 5px;
+        }
+        
+            .album:hover {
+                color: #872341;
+            }
+
+            .album.selected {
+                background-color: #872341;
+                border-radius: 5px;
+                color: #93B1A6;
+                font-weight: bold;
+                padding: 5px;
+            }
+        
+        
+    .column-2-right {
+        flex: 14;
+        box-sizing: border-box;
+        overflow-y: auto; /* Enable vertical scrolling if content overflows */
+
+        padding-left: 25px;
+        height: calc(100vh - 236px);        
+    }
+
+        .tracklist-item {
+            margin-bottom: 10px; /* Adjusts the space between tracklist items */
+            line-height: 1.5; /* Increases the space between lines */
+            color: #93B1A6;
+            transition: color 0.3s;
+        }
+
+            .tracklist-item:hover {
+                color: #872341;
+            }
+
+        .album-info {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            padding: 15px;
+            border: 2px solid #93B1A6;
+            border-radius: 10px;
+            background-color: #212121;
+            color: #93B1A6;
+        }
+        
+            #album-info-placeholder {
+                margin: 0;
+                color: #93B1A6;
+            }
+        
+        
+
+
+.audio-player-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid #ccebe0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+    .custom-audio-player {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .controls {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    #play-pause {
+        background-color: #040D12;
+        border: none;
+        color: #ccebe0;
+        width: 80px;
+        height: 40px;
+        padding: 0;
+        font-size: 12px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        box-sizing: border-box;
+        transition: color 0.3s;
+    }
+
+        #play-pause:hover {
+            color: #872341;
+        }
+
+    .progress-container {
+        flex-grow: 1;
+        background-color: #212121;
+        height: 5px;
+        margin: 0 10px;
+        border-radius: 0px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .progress-bar {
+        background-color: #ccebe0;
+        height: 100%;
+        width: 0;
+        border-radius: 0px;
+    }
+
+    .time {
+        font-family: monospace;
+        font-size: 12px;
+        color: #5C8374;
+    }
+
+    #current-time {
+        color: #ccebe0;
+        font-size: 12px;
+    }
+
+    /* Style for the volume slider */
+    #volume-slider {
+        width: 100px;
+        margin-left: 10px;
+        background-color: transparent; /* Remove default background */
+    }
+
+        /* Style the slider track (the background of the slider) */
+        #volume-slider::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 5px;
+            background: #212121; /* Track background color */
+            border-radius: 0; /* Match progress bar border radius */
+            cursor: pointer;
+        }
+
+        /* Style the slider thumb (the draggable part of the slider) */
+        #volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none; /* Remove default thumb styling */
+            background: #ccebe0; /* Thumb color */
+            width: 15px; /* Thumb width */
+            height: 15px; /* Thumb height */
+            border-radius: 50%; /* Make thumb circular */
+            cursor: pointer;
+            margin-top: -5px; /* Adjust vertical alignment of the thumb */
+        }
+
+        /* For Firefox */
+        #volume-slider::-moz-range-track {
+            width: 100%;
+            height: 5px;
+            background: #212121;
+            border-radius: 0;
+        }
+
+        #volume-slider::-moz-range-thumb {
+            background: #ccebe0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* For IE */
+        #volume-slider::-ms-track {
+            width: 100%;
+            height: 5px;
+            background: transparent; /* Needed for proper appearance in IE */
+            border-color: transparent;
+            color: transparent; /* Needed for proper appearance in IE */
+        }
+
+        #volume-slider::-ms-fill-lower {
+            background: #212121;
+            border-radius: 0;
+        }
+
+        #volume-slider::-ms-fill-upper {
+            background: #212121;
+            border-radius: 0;
+        }
+
+        #volume-slider::-ms-thumb {
+            background: #ccebe0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
