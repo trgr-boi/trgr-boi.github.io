@@ -42,34 +42,34 @@
         historyIndex = commandHistory.length;
        
        // commands & reactions
-        if (command === 'help') {
+        if (command.toLowerCase() === 'help') {
             showHelp();
         } else
-        if (command === 'about') {
+        if (command.toLowerCase() === 'about') {
             showAbout();
         } else
-        if (command === 'whoami') {
+        if (command.toLowerCase() === 'whoami') {
             showWhoami();
         } else 
-        if (command === 'clear'){
+        if (command.toLowerCase() === 'clear'){
             clearOutput();
         } else
-        if (command === 'open music'){
+        if (command.toLowerCase() === 'music'){
             window.location.href = 'music.html';
         } else
-        if (command === 'open old-music'){
+        if (command.toLowerCase() === 'old-music'){
             window.location.href = 'old-music.html';
         } else
-         if (command === 'files') {
+         if (command.toLowerCase() === 'files') {
             showFiles(); //make link later
         } else
-        if (command === 'depo'){
+        if (command.toLowerCase() === 'depo'){
             window.open('https://github.com/Trigger-BOI');
         } else
-        if (command === 'liefje'){
+        if (command.toLowerCase() === 'liefje'){
             showLiefje();
         } else
-        if (command === 'suki'){
+        if (command.toLowerCase() === 'suki'){
             showSuki();
         } else
 
@@ -99,7 +99,7 @@
         appendOutput(' - Who even am i?<br>');
         appendOutput('depo', 'color1');
         appendOutput(' - go to Github page.<br>');
-        appendOutput('open music', 'color1');
+        appendOutput('music', 'color1');
         appendOutput(' - listen to my music.<br>');
         appendOutput('files', 'color1');
         appendOutput(' - browse local files.<br>');
