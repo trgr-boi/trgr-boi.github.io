@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
     // ALBUM LIST, TRACKLIST & ALBUM INFO
-        document.querySelectorAll('.album').forEach(album => {
+        document.querySelectorAll('.title').forEach(album => {
             album.addEventListener('click', function() {
                 // Remove 'selected' class from any other album
                 document.querySelectorAll('.album').forEach(a => a.classList.remove('selected'));
