@@ -22,7 +22,7 @@ hr {
     border: 2px solid #ccebe0;
     border-radius: 12px;
     padding: 20px;
-    min-width: 590px; 
+    min-width: 437px;
 }
 
 #terminal-big {
@@ -32,7 +32,7 @@ hr {
     border: 2px solid #ccebe0;
     border-radius: 12px;
     padding: 20px;
-    min-width: 590px; 
+    min-width: 437px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -113,6 +113,7 @@ hr {
         display: flex;
         align-items: center;
         flex-direction: column;
+        
     }
 
         .column-menu nav {
@@ -126,10 +127,15 @@ hr {
             display: flex; /* Arrange list items in a horizontal row */
             justify-content: center;
             width: 100%;
+            
         }
 
         .column-menu nav ul li {
             margin: 0 5px; /* Add spacing between the list items */
+            border: 1px solid #5C8374;
+            border-radius: 10px;
+            padding-right: 2px;
+
         }
 
         .column-menu nav ul li a {
@@ -210,6 +216,83 @@ hr {
                 color: #872341;
             }
 
+/* General styles for mobile devices */
+@media screen and (max-width: 904px) {
+   body {
+    font-size: 14px;
+   }
+   
+   #ascii-art {
+    font-family: monospace;
+    text-shadow: 0 0 20px #93B1A6;
+    white-space: nowrap; /* Prevent line breaks within the ASCII art */
+    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+    overflow-y: hidden; /* Hide vertical overflow */
+    font-size: 0.8rem; /* Adjust font size to fit the container (optional) */
+    display: block; /* Ensure the container behaves as a block element */    }
+
+    /* Adjust the header layout */
+    .header {
+        flex-direction: column; /* Stack the logo and menu vertically */
+        font-size: 1.125rem; /* 18px on mobile */
+    }
+    
+    .column-logo {
+        flex: none; /* Remove flex-grow property */
+        padding: 0; /* Remove padding */
+        text-align: center; /* Center the logo */
+    }
+    
+    .column-menu {
+        flex: none; /* Remove flex-grow property */
+        border-left: none; /* Remove the left border */
+        padding: 10px; /* Add some padding */
+        margin-top: 10px; /* Add space above the menu */
+        width: 100%; /* Ensure the menu takes full width */
+        text-align: center; /* Center align the menu items */
+        font-size: 1rem; /* 16px on mobile */
+    }
+    
+    .column-menu nav ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */        
+        gap: 10px; /* Space between items */
+        padding: 10px;
+        margin: 0;
+        list-style-type: none;
+        }
+    
+    .column-menu nav ul li {
+        text-align: center; /* Center align text within each grid item */    }
+
+    .column-menu nav ul li a {
+        text-decoration: none;
+        color: #5C8374;
+        font-size: 18px; /* Adjust font size if needed */
+        font-weight: regular;
+        padding: 10px 15px;
+        display: block; /* Make link fill the entire grid cell */
+        transition: color 0.3s;
+    }
+
+    .main-page {
+        padding: 0; /* Remove padding to fit better on mobile */
+    }
+
+    /* Ensure terminal view takes full width on mobile */
+    #terminal-big {
+        width: calc(100vw - 90px);
+        height: calc(100vh - 90px);
+        min-width: 437px;
+        margin: 20px 0;
+        border: 2px solid #ccebe0;
+        border-radius: 12px;
+        padding: 20px;
+        position: relative;
+        display: flex;
+        flex-direction: column;    }
+}
+
 
     .announcements {
         width: 100%;
@@ -220,7 +303,7 @@ hr {
         text-shadow: 0 0 20px #93B1A6;
         border: 2px solid #93B1A6;
         background-color: #212121;
-        border-radius: 10px;
+        border-radius: 25px;
 
         overflow: hidden; /* Hide any overflow outside the container */
         white-space: nowrap; /* Prevent line breaks in the text */
@@ -259,19 +342,32 @@ hr {
 
     }
 
-        .album {
+    .column-2-left-notes {
+        flex: 6;
+        box-sizing: border-box;
+        overflow-y: auto; /* Enable vertical scrolling if content overflows */
+
+        padding-right: 25px;
+        border-right: 2px solid #ccebe0;
+        height: 100%;
+
+    }
+
+        .title {
             cursor: pointer;
             color: #93B1A6;
             margin-bottom: 10px;
+            
             transition: color 0.3s;
             padding: 5px;
+            text-decoration: none;
         }
         
-            .album:hover {
+            .title:hover {
                 color: #872341;
             }
 
-            .album.selected {
+            .title.selected {
                 background-color: #872341;
                 border-radius: 5px;
                 color: #93B1A6;

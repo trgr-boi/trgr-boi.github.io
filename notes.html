@@ -8,7 +8,7 @@
     <link rel="icon" href="src/images/favicon.png" type="image/png">
 </head>
 <body>
-    <script src="script-music.js"></script>
+    <script src="script-notes.js"></script>
 
 
     <div id="terminal-big"> 
@@ -39,10 +39,10 @@
                 <!-- Navigation Menu -->
                 <nav>
                     <ul>
-                        <li><a href="about-but">| About |</a></li>
-                        <li><a href="stream-but">| Streaming |</a></li>
-                        <li><a href="store-but">| Store |</a></li>
-                        <li><a href="quit-but">| Quit |</a></li>
+                        <li><a href="about-but">About</a></li>
+                        <li><a href="stream-but">Streaming</a></li>
+                        <li><a href="store-but">Store</a></li>
+                        <li><a href="quit-but">Quit</a></li>
                     </ul>
                 </nav>
 
@@ -51,44 +51,27 @@
         <!-- Main body -->
         <div class="main-page">
 
-            <!-- LEFT column -->
-            <div class="column-2-left">
-
-                <p style="font-weight: bold;">Notes list</p>
-                <hr style="    height: 1px;">
-
-                <p class="album" data-tracklist="fefe">'19/08/2024>>Rant about streaming</p>
-            </div>
+            <!-- Only column (is collumn to work together with other pages) -->
+            <div class="column-2-left-notes">
         
-            <!-- RIGHT column -->
-            <div class="column-2-right">
-
-                <!-- info box -->
-                <div id="album-info" class="album-info">
-                    <h3 id="album-name" style="margin-top: 0px;"></h3> <!-- This will hold the album name -->
-                </div>
-                
-                <hr> <!-- Line between info & songs-->
-                
-                <!-- tracklist -->
-                <p id="tracklist-placeholder"></p>
+                <p style="font-weight: bold;">Notes list</p>
+                <hr style="height: 1px; margin-bottom: 20px;">
+        
+                <!-- List of titles -->
+                <a class="title" href="notes/streaming-music-rant.html" target="_blank" >19/08/2024 >> Streaming Music Rant</a>
+                <!-- Add more titles as needed -->
+            </div>
             
             </div>
         </div>
-
+        
     </div>
     
 
     <!-- ABOUT MENU -->
         <div id="about-popup" class="popup-overlay">
             <div class="popup-content-about">
-                <h3>What the hell is this?</h3>
-                <p>Hi, I'm TRGR. The creator of Subliminal OS.</p>
-                <p>If you don't know what Subliminal OS is, it's a OS that I created to place my mark on the internet completely detached <br>from social media. The program you see here is my music program. Here you can listen to all my music.</p>
-                <p>This is my attempt at creating a personal website.</p>
-                <p>I truly believe that this is a better, more healthy way than the fast growth that social media offers. This is a more <br>personal experience and I am free to do and to say whatever I want.<br> Plus, this is something that I like to do and would like to het better at!</p>
-                <p>For more info about personal sites check <a href="https://www.youtube.com/watch?v=zswyWBtF-7Y&t=156s" target="_blank" style="color: #872341;">this video</a>.</p>
-                <p>This is my second attempt at a music page. I tried to do the first one in a terminal view but it was not user-<br>friendly at all... It can be visited with the 'old-music' command in the terminal.</p>
+                <p>###</p>
                 <button id="close-about-popup" class="close-popup">| X |</button>
             </div>
         </div>
@@ -96,13 +79,7 @@
     <!-- STREAM MENU -->
         <div id="stream-popup" class="popup-overlay">
             <div class="popup-content">
-                <h3>Select a service but remember</h3>
-                <p style="margin-top: -10px; margin-bottom: 30px;">streaming is slowly destroying music</p>
-                <a href="https://open.spotify.com/artist/3wNxFF7mMR6xYsj5Ac0s5G?si=6iyaz5RWSi-F7BEOTAZspw" target="_blank" class="store-link">Spotify</a>
-                <a href="https://music.apple.com/be/artist/triggerboi/1535346661" target="_blank" class="store-link">Apple Music</a>
-                <a href="https://soundcloud.com/trigger_boi" target="_blank" class="store-link">Soundcloud</a>
-                <a href="https://linktr.ee/TriggerBOI_" target="_blank" class="store-link">linktree</a>
-                <a href="notes/destroying.html" target="_blank" class="store-link">What do you mean<br>destroying?</a>
+                <p>###</p>
                 <button id="close-stream-popup" class="close-popup">| X |</button>
             </div>
         </div>
@@ -110,9 +87,7 @@
     <!-- STORE MENU -->
         <div id="store-popup" class="popup-overlay">
             <div class="popup-content">
-                <h3>Select a Store</h3>
-                <a href="https://trgr.bandcamp.com/" target="_blank" class="store-link">Bandcamp</a>
-                <a href="https://music.apple.com/be/artist/triggerboi/1535346661" target="_blank" class="store-link">iTunes</a>
+                <p>###</p>
                 <button id="close-popup" class="close-popup">| X |</button>
             </div>
         </div>
