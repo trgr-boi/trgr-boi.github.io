@@ -53,6 +53,8 @@
             window.location.href = 'old-music.html';
         } else if (command.toLowerCase() === 'files') {
             showFiles();
+        } else if (command.toLowerCase() === 'notes') {
+            window.location.href = 'notes.html';
         } else if (command.toLowerCase() === 'depo') {
             window.open('https://github.com/Trigger-BOI');
         } else if (command.toLowerCase() === 'liefje') {
@@ -97,11 +99,13 @@
         appendOutput('whoami', 'color1');
         appendOutput(' - Who even am I?<br>');
         appendOutput('depo', 'color1');
-        appendOutput(' - go to Github page.<br>');
+        appendOutput(' - go to Github page.<br><br>');
         appendOutput('music', 'color1');
         appendOutput(' - open music program.<br>');
+        appendOutput('notes', 'color1');
+        appendOutput(' - open notes program<br>');
         appendOutput('files', 'color1');
-        appendOutput(' - browse local files.<br>');
+        appendOutput(' - browse local files.<br><br>');
         appendOutput('help', 'color1');
         appendOutput(' - You clearly know how to use this.<br>');
         appendOutput('clear', 'color1');
