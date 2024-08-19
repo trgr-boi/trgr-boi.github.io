@@ -368,7 +368,7 @@ hr {
     .progress-container {
         flex-grow: 1;
         background-color: #212121;
-        height: 5px;
+        height: 6px;
         margin: 0 10px;
         border-radius: 0px;
         position: relative;
@@ -393,7 +393,7 @@ hr {
         font-size: 12px;
     }
 
-    /* Style for the volume slider */
+    /* Style for the volume slider - ChatGPT - I didn't know any of this shit but it works */
     #volume-slider {
         width: 100px;
         margin-left: 10px;
