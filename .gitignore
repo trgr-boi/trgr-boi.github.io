@@ -1,3 +1,16 @@
-src/.DS_Store
+# Ignore Node.js dependencies
+node_modules/
+
+# Ignore macOS system files
 .DS_Store
-.DS_Store
+
+# Ignore IDE configurations
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignore build artifacts
+/dist/
+/build/
