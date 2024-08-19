@@ -22,7 +22,7 @@ hr {
     border: 2px solid #ccebe0;
     border-radius: 12px;
     padding: 20px;
-    min-width: 437px;
+    min-width: 325px;
 }
 
 #terminal-big {
@@ -32,7 +32,7 @@ hr {
     border: 2px solid #ccebe0;
     border-radius: 12px;
     padding: 20px;
-    min-width: 437px;
+    min-width: 325px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -228,8 +228,10 @@ hr {
     white-space: nowrap; /* Prevent line breaks within the ASCII art */
     overflow-x: auto; /* Allow horizontal scrolling if content overflows */
     overflow-y: hidden; /* Hide vertical overflow */
-    font-size: 0.8rem; /* Adjust font size to fit the container (optional) */
-    display: block; /* Ensure the container behaves as a block element */    }
+    font-size: 0.44rem; /* Adjust font size to fit the container (optional) */
+    display: block; /* Ensure the container behaves as a block element */    
+    text-align: center;
+}
 
     /* Adjust the header layout */
     .header {
@@ -257,7 +259,7 @@ hr {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */        
         gap: 10px; /* Space between items */
-        padding: 10px;
+        padding-bottom: 10px;
         margin: 0;
         list-style-type: none;
         }
@@ -283,7 +285,7 @@ hr {
     #terminal-big {
         width: calc(100vw - 90px);
         height: calc(100vh - 90px);
-        min-width: 437px;
+        min-width: 325px;
         margin: 20px 0;
         border: 2px solid #ccebe0;
         border-radius: 12px;
