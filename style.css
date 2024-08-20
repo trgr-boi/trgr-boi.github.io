@@ -436,6 +436,19 @@ hr {
 
     }
 
+    .column-2-left-notes a {
+        display: block; /* Makes each link a block-level element */
+        margin-bottom: 10px; /* Adds space between the links */
+        color: #93B1A6; /* Adjust the color if needed */
+        text-decoration: none; /* Removes the underline */
+        font-size: 14px; /* Adjust the font size */
+    }
+    
+    .column-2-left-notes a:hover {
+        color: #872341; /* Changes color on hover */
+    }
+    
+
         .title {
             cursor: pointer;
             color: #93B1A6;
