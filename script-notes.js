@@ -17,6 +17,25 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+
+// HAMBURGER MENU
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const closeMenu = document.getElementById('close-menu');
+
+    menuToggle.addEventListener('click', function () {
+        menu.style.display = 'block';
+    });
+
+    closeMenu.addEventListener('click', function () {
+        menu.style.display = 'none';
+    });
+});
+
+
+
 // MENUS
     // ABOUT MENU
         document.addEventListener('DOMContentLoaded', function() {

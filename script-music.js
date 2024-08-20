@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const albumInfoPlaceholder = document.getElementById('album-info-placeholder');
     const albumNameElement = document.getElementById('album-name'); // Get the album name element
 
+    
     // MEDIA PLAYER
         function togglePlayPause() {
             if (audio.paused) {
@@ -119,6 +120,22 @@ document.addEventListener('DOMContentLoaded', function() {
         audio.addEventListener('loadedmetadata', updateDuration);
         progressContainer.addEventListener('click', setAudioTime);
         volumeSlider.addEventListener('input', changeVolume);
+});
+
+// HAMBURGER MENU
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+    const closeMenu = document.getElementById('close-menu');
+
+    menuToggle.addEventListener('click', function () {
+        menu.style.display = 'block';
+    });
+
+    closeMenu.addEventListener('click', function () {
+        menu.style.display = 'none';
+    });
 });
 
 // ABOUT MENU
