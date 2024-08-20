@@ -1,23 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const audio = document.getElementById('audio-element');
-    const playPauseButton = document.getElementById('play-pause');
-    const progressBar = document.getElementById('progress-bar');
-    const progressContainer = document.querySelector('.progress-container');
-    const currentTimeElement = document.getElementById('current-time');
-    const durationElement = document.getElementById('duration');
-    const volumeSlider = document.getElementById('volume-slider');
-    const albumInfoBox = document.getElementById('album-info');
-    const albumInfoPlaceholder = document.getElementById('album-info-placeholder');
-    const albumNameElement = document.getElementById('album-name'); // Get the album name element
-
-    
-
-    // ALBUM LIST, TRACKLIST & ALBUM INFO
-        
-    
-});
-
-
 // HAMBURGER MENU
 
 document.addEventListener('DOMContentLoaded', function () {
