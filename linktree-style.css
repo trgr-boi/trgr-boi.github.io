@@ -51,6 +51,25 @@ hr {
     box-shadow: 20px 20px 0px #358e8e;
 }
 
+
+#feature {
+    border: 2px #000000 solid;
+    min-width: 200px;
+}
+    #feature a {
+        display: inline-block;
+        white-space: normal;
+        word-break: break-all;
+        word-wrap: break-word;
+        background-color: rgb(253, 253, 110);
+        color: #000000;
+
+    }
+        #feature a:hover{
+            background-color: #000000;
+            color: rgb(253, 253, 110);
+        }
+
 .links-vertical {
     width: 90%;
     max-width: 600px;
