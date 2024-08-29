@@ -33,15 +33,15 @@ hr {
     margin: 20px;
 
     border: none;
-    border-top: 2px dotted #000000;
+    border-top: 5px dotted #000000;
 }
 
-#frame {
+.frame {
     width: 100%;
     max-width: 800px;
     min-width: 300px;
 
-    margin: 0 45px 0 20px; 
+    margin: 20px 45px 20px 30px; 
     padding: 16px 50px;
 
     text-align: center;
@@ -61,10 +61,10 @@ hr {
         text-decoration: underline;
     }
     #feature a {
-        padding: 5px 25px 8px;
+        padding: 5px 20px 8px;
         background-color: rgb(253, 253, 110);
         color: #000000;
-        font-size: 22px;
+        font-size: 18px;
 
     }
         #feature a:hover{
@@ -125,13 +125,24 @@ hr {
    
     body {
         align-items: baseline;
+        padding-right: 27px;
     }
-    #frame {
+
+    
+    .frame {
         max-width: 400px;
         min-width: 200px;
-    
-        margin: 25px 45px 30px 20px; 
+        width: 100%;
+        
+        margin: 20px 10px 30px 10px; 
         padding: 16px 50px;
+        
+    }
+    
+    #feature a {
+        padding: 5px 25px 8px;
+        font-size: 22px;
+
     }
 
     .decor {
