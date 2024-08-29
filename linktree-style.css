@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('fonts/PixelOperatorSC.ttf') format('woff2'),
+         url('fonts/PixelOperatorSC-Bold.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+
+    margin: 0;
+}
+
+body {
+    height: 100%;
+
+    justify-content: center;
+    align-items: center;
+    
+    display: flex;
+
+    font-family: "MyCustomFont", sans-serif;
+
+    background-color: #2f2f7e;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+hr {
+    margin: 20px;
+
+    border: none;
+    border-top: 2px dotted #000000;
+}
+
+#frame {
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+
+    margin: 0 45px 0 20px; 
+    padding: 16px 50px;
+
+    text-align: center;
+
+    background-color:  #c3c3c3 ;
+    border: 5px solid #000000;
+    box-shadow: 20px 20px 0px #358e8e;
+}
+
+.links-vertical {
+    width: 90%;
+    max-width: 600px;
+
+    margin: 0 auto;
+    padding-left: 0;
+    justify-content: center;
+
+    display: flex;
+
+    color: #3498db;
+    list-style-type: none;
+    flex-wrap: wrap;
+    font-size: 28px;
+}
+    .links-vertical a {
+        padding: 5px 25px 8px;
+        margin: 5px;
+
+        color: #FFFFFF;
+        background-color: #818181;
+        text-decoration: none;
+        white-space: nowrap;
+    }
+        .links-vertical a:hover {
+            background-color: #fdffff;
+            color: #000000;
+        }
+
+.links-horizontal {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+
+
+}
+    .links-horizontal a {
+        padding: 10px;
+        margin: 5px;
+
+        background-color: #818181;
+        color: #FFFFFF;
+        white-space: nowrap;
+        text-decoration: none;
+    }
+        .links-horizontal a:hover {
+            background-color: #fdffff;
+            color: #000000;
+        }
+
+@media screen and (max-width: 850px) {
+   
+    body {
+        align-items: baseline;
+    }
+    #frame {
+        max-width: 400px;
+        min-width: 200px;
+    
+        margin: 25px 45px 30px 20px; 
+        padding: 16px 50px;
+    }
+
+    .decor {
+        font-size: 12px;
+    }
+
+    .info-text {
+        font-size: 20px;
+    }
+}

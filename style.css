@@ -1,6 +1,18 @@
+@font-face {
+    font-family: 'Hack-Nerd';
+    src: url('fonts/HackNerdFontMono-Regular.ttf') format('woff2'),
+         url('fonts/HackNerdFontMono-Italic.ttf') format('woff'),
+         url('fonts/HackNerdFontMono-Bold.ttf') format('woff'),
+         url('fonts/HackNerdFontMono-BoldItalic.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+
+}
+
 body {
-    font-family: monospace;
-    background-color: #040D12;
+    font-family: Hack-Nerd;
+    background-color: #2f2f7e;
     color: #93B1A6;
     display: flex;
     justify-content: center;
@@ -17,35 +29,43 @@ hr {
 
 #terminal {
     width: 590px;
-    height: calc(100vh - 90px);
+    height: calc(100vh - 125px);
     margin: 20px;
     border: 2px solid #ccebe0;
-    border-radius: 12px;
+    background-color: #040D12;
     padding: 20px;
+    margin: 25px 45px 45px 25px;
     min-width: 325px;
+    box-shadow: 20px 20px 0px #358e8e;
+
 }
 
 #terminal-big {
     width: calc(100vw - 90px);
     height: calc(100vh - 90px);
     margin: 20px 0;
+    background-color: #040D12;
+    margin: 25px 45px 45px 25px;
+
     border: 2px solid #ccebe0;
-    border-radius: 12px;
     padding: 20px;
     min-width: 325px;
     position: relative;
     display: flex;
     flex-direction: column;
+    box-shadow: 20px 20px 0px #358e8e;
+
 }
 
 .text {
-    margin-top: 20px;
+    margin-top: 0px;
     border: 2px solid #93B1A6;
     border-radius: 10px;
     padding: 10px;
-    height: calc(100vh - 265px);
+    height: calc(100vh - 300px);
     overflow: auto;
     overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    font-size: 14px;
 }
 
 #output {
@@ -90,7 +110,11 @@ hr {
     text-shadow: 0 0 20px #93B1A6;
     justify-content: center;
 }
-
+.logo {
+    width: 100%;
+    margin-top: -7px;
+    margin-bottom: 7px;
+}
 .header {
     display: flex;
     width: 100%;
@@ -197,21 +221,12 @@ hr {
                         color: #872341;
                     }   
 
-            /* Responsive design: ensure menu and hamburger are visible on all screens */
+            /* Responsive design on small screens */
             @media (max-width: 904px) {
-                .menu-toggle {
-                    display: block; /* Ensure hamburger icon is visible */
-                    text-align: center;
-                    align-items: center;
-
-                }
-
-                #menu {
-                    display: none; /* Ensure menu is hidden initially */
-                }
+                
             }
 
-            /* Ensure the hamburger menu is visible on larger screens as well */
+            /* Responsive design on large screens */
             @media (min-width: 904px) {
                 .menu-toggle {
                     display: block; /* Ensure hamburger icon is visible */
@@ -290,90 +305,6 @@ hr {
             .close-popup:hover {
                 color: #872341;
             }
-
-/* General styles for mobile devices */
-@media screen and (max-width: 904px) {
-   body {
-    font-size: 14px;
-   }
-   
-   #ascii-art {
-    font-family: monospace;
-    text-shadow: 0 0 20px #93B1A6;
-    white-space: nowrap; /* Prevent line breaks within the ASCII art */
-    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
-    overflow-y: hidden; /* Hide vertical overflow */
-    font-size: 0.44rem; /* Adjust font size to fit the container (optional) */
-    display: block; /* Ensure the container behaves as a block element */    
-    text-align: center;
-}
-
-   /* Adjust the header layout */
-    .header {
-        flex-direction: column; /* Stack the logo and menu vertically */
-        font-size: 1.125rem; /* 18px on mobile */
-    }
-    
-    .column-logo {
-        flex: none; /* Remove flex-grow property */
-        padding: 0; /* Remove padding */
-        text-align: center; /* Center the logo */
-    }
-    
-    .column-menu {
-        width: 100%; /* Ensure the menu column takes the full width */
-        display: flex;
-        justify-content: center; /* Center the button horizontally */
-        align-items: center; /* Center the button vertically */
-        padding: 10px; /* Adjust padding */
-        margin-top: 10px;
-    }
-
-    .menu-toggle {
-        position: static; /* Remove absolute positioning */
-        text-align: center; /* Center text within the button */
-        margin: 0 auto; /* Center the button horizontally */
-    }
-
-    
-    .column-menu nav ul {
-        gap: 10px; /* Space between items */
-        padding-bottom: 10px;
-        margin: 10px;
-        list-style-type: none;
-        }
-    
-    .column-menu nav ul li {
-        text-align: center; /* Center align text within each grid item */    }
-
-    .column-menu nav ul li a {
-        text-decoration: none;
-        color: #5C8374;
-        font-size: 18px; /* Adjust font size if needed */
-        font-weight: regular;
-        padding: 10px 15px;
-        display: block; /* Make link fill the entire grid cell */
-        transition: color 0.3s;
-    }
-    
-
-    .main-page {
-        padding: 0; /* Remove padding to fit better on mobile */
-    }
-
-    /* Ensure terminal view takes full width on mobile */
-    #terminal-big {
-        width: calc(100vw - 90px);
-        height: calc(100vh - 90px);
-        min-width: 325px;
-        margin: 20px 0;
-        border: 2px solid #ccebe0;
-        border-radius: 12px;
-        padding: 20px;
-        position: relative;
-        display: flex;
-        flex-direction: column;    }
-}
 
 
     .announcements {
@@ -654,3 +585,98 @@ hr {
             border-radius: 50%;
             cursor: pointer;
         }
+
+/* General styles for mobile devices */
+@media screen and (max-width: 904px) {
+    body {
+     font-size: 14px;
+    }
+    
+    #ascii-art {
+     font-family: monospace;
+     text-shadow: 0 0 20px #93B1A6;
+     white-space: nowrap; /* Prevent line breaks within the ASCII art */
+     overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+     overflow-y: hidden; /* Hide vertical overflow */
+     font-size: 0.44rem; /* Adjust font size to fit the container (optional) */
+     display: block; /* Ensure the container behaves as a block element */    
+     text-align: center;
+ }
+ 
+    /* Adjust the header layout */
+     .header {
+         flex-direction: column; /* Stack the logo and menu vertically */
+         font-size: 1.125rem; /* 18px on mobile */
+     }
+     
+     .column-logo {
+         flex: none; /* Remove flex-grow property */
+         padding: 0; /* Remove padding */
+         text-align: center; /* Center the logo */
+     }
+     
+     .column-menu {
+         width: 100%; /* Ensure the menu column takes the full width */
+         display: flex;
+         justify-content: center; /* Center the button horizontally */
+         align-items: center; /* Center the button vertically */
+         padding: 10px; /* Adjust padding */
+         margin-top: 10px;
+     }
+ 
+     .menu-toggle {
+         position: static; /* Remove absolute positioning */
+         text-align: center; /* Center text within the button */
+         margin: 0 auto; /* Center the button horizontally */
+     }
+ 
+     
+     .column-menu nav ul {
+         gap: 10px; /* Space between items */
+         padding-bottom: 10px;
+         margin: 10px;
+         list-style-type: none;
+         }
+     
+     .column-menu nav ul li {
+         text-align: center; /* Center align text within each grid item */    }
+ 
+     .column-menu nav ul li a {
+         text-decoration: none;
+         color: #5C8374;
+         font-size: 18px; /* Adjust font size if needed */
+         font-weight: regular;
+         padding: 10px 15px;
+         display: block; /* Make link fill the entire grid cell */
+         transition: color 0.3s;
+     }
+     
+ 
+     .main-page {
+         padding: 0; /* Remove padding to fit better on mobile */
+     }
+ 
+     /* Ensure terminal view takes full width on mobile */
+     #terminal-big {
+         width: calc(100vw - 90px);
+         height: calc(100vh - 90px);
+         min-width: 325px;
+         margin: 20px 0;
+         border: 2px solid #ccebe0;
+         border-radius: 12px;
+         padding: 20px;
+         position: relative;
+         display: flex;
+         flex-direction: column;    }
+ }
+ 
+ .menu-toggle {
+     display: block; /* Ensure hamburger icon is visible */
+     text-align: center;
+     align-items: center;
+ 
+ }
+ 
+ #menu {
+     display: none; /* Ensure menu is hidden initially */
+ }
