@@ -53,16 +53,18 @@ hr {
 
 
 #feature {
-    border: 2px #000000 solid;
     min-width: 200px;
+    padding-bottom: 20px;
+    margin: -5px 0 -15px;
 }
+    #feature p {
+        text-decoration: underline;
+    }
     #feature a {
-        display: inline-block;
-        white-space: normal;
-        word-break: break-all;
-        word-wrap: break-word;
+        padding: 5px 25px 8px;
         background-color: rgb(253, 253, 110);
         color: #000000;
+        font-size: 22px;
 
     }
         #feature a:hover{
@@ -80,7 +82,6 @@ hr {
 
     display: flex;
 
-    color: #3498db;
     list-style-type: none;
     flex-wrap: wrap;
     font-size: 28px;
