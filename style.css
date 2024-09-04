@@ -12,7 +12,7 @@
 
 body {
     font-family: Hack-Nerd;
-    background-color: #2f2f7e;
+    background-color: #ffffff;
     color: #93B1A6;
     display: flex;
     justify-content: center;
@@ -36,7 +36,7 @@ hr {
     padding: 20px;
     margin: 25px 45px 45px 25px;
     min-width: 325px;
-    box-shadow: 20px 20px 0px #358e8e;
+    box-shadow: 20px 20px 0px #757575;
 
 }
 
