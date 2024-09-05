@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'pixel';
+    src: url('fonts/PixelOperatorSC.ttf') format('woff2'),
+         url('fonts/PixelOperatorSC-Bold.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* GLOBAL STYLES */
+
+    body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        background-color: #ffffff;
+        font-family: "pixel", sans-serif;
+        font-size: 24px;
+    }
+
+    main {
+        padding: 12px;
+        background-color: #ffffff;
+    }
+
+    hr {
+        border: none;
+        height: 4px;
+        background-color: #000000;
+    }
+
+/* INDIVIDUAL STYLES */
+
+    .frame {
+        border: 4px #000000 solid;
+        margin: 30px;
+        width: 80%;
+        height: 92%;
+        box-shadow: 15px 15px 0px #000000; /* SHADOW */
+     }
+     /* INSIDE FRAME */
+        /* TOP BAR */
+         .header-bar {
+            background-color: #000000;
+            color: #ffffff;
+            text-align: center;
+            padding: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+         }
+            .header-title {
+                font-size: 50px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        
+        /* MENU BAR */
+         .header-menu {
+            margin: 0;
+            padding: 12px;
+            background-color: lightgray;
+            border-bottom: 4px black solid;
+            justify-content: center;
+
+         }
+            .header-menu nav {
+            display: flex;
+            }
+            .menu-links {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                justify-content: center;
+
+            }
+            .menu-links li {
+                margin-right: 2em; /* spacing between buttons */
+            }
+            .menu-links li a {
+                color: #000;
+                text-decoration: none;
+                font-size: 32px;
+            }
+            .menu-links li a:hover {
+                text-decoration: underline;
+            }
+
+        /* Hamburger menu styling */
+            .hamburger {
+                display: none;
+                flex-direction: column;
+                cursor: pointer;
+                justify-content: center;
+                position: relative; /* or absolute, depending on your layout */
+                z-index: 999; /* Ensures hamburger is above other content */
+            
+            }
+
+            .hamburger .line {
+                width: 40px;
+                height: 6px;
+                background-color: black;
+                margin: 5px 0;
+            }
+            .close-btn {
+                display: none;
+                font-size: 50px;
+                color: black;
+                cursor: pointer;
+                align-self: left;
+                padding: 10px 20px;
+            }
+
+/* Responsive Styles */
+    @media screen and (max-width: 768px) {
+        .frame {
+            width: 90%;
+        }
+        .menu-links {
+            display: none;
+            position: absolute; /* Position the menu absolutely so it layers properly */
+            top: 100px;
+            width: 60%;
+            background-color: #ffffff;
+            border: 4px black solid;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 15px 15px 0px #000000; /* SHADOW */
+            padding-bottom: 100px;
+            z-index: 1000; /* Ensures menu opens above other content */
+        }
+        .menu-links.active {
+            display: flex;
+        }
+            .menu-links li {
+                margin: 20px 0;
+            }
+            .menu-links li a {
+                font-size: 50px;
+            }
+    
+        .hamburger {
+            display: flex;
+        }
+    
+        .close-btn {
+            display: block;
+        }
+
+        
+    
+    }
