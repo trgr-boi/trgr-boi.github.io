@@ -19,6 +19,7 @@
         height: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
         background-color: #ffffff;
         font-family: "pixel", sans-serif;
         font-size: 24px;
@@ -41,7 +42,7 @@
         border: 4px #000000 solid;
         margin: 30px;
         width: 80%;
-        height: 92%;
+        height: 80%;
         box-shadow: 15px 15px 0px #000000; /* SHADOW */
      }
      /* INSIDE FRAME */

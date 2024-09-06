@@ -25,7 +25,7 @@ main {
 
         }
     .feat-post-container {
-        height: 60vh;
+        height: 52vh;
         border: 4px black solid;
         padding: 12px;
         overflow: hidden;
@@ -36,18 +36,24 @@ main {
     .feat-post-container:hover {
         color: black;
     }
-        .feat-content {
-            transform: translateY(100%);
-            animation: scroll-up 50s linear infinite;
-         }
-            @keyframes scroll-up {
-                from {
-                    transform: translateY(28%);
-                }
-                to {
-                    transform: translateY(-100%);
-                }
-            }
+    .feat-content {
+        animation: scroll-animation 31s cubic-bezier(0.3, 0, 1, 1) infinite;
+    }
+        @keyframes scroll-animation {
+        0% {
+            transform: translateY(50vh);
+        }
+        5% {
+            transform: translateY(46vh);
+        }
+        10% {
+            transform: translateY(46vh);
+        }
+        100% {
+            transform: translateY(-100%);
+        }
+    }
+            
             .feat-content img {
                 filter: grayscale(100%);
                 transition: filter 0.3s ease;
@@ -79,6 +85,7 @@ main {
 
 .link-container {
     text-align: right;
+    height: 52vh;
     padding: 15px;
     border-right: 4px black solid;
 }
@@ -123,6 +130,7 @@ main {
         }
     .feat-post-container {
         height: 100%;
+        width: 100;
         color: black;
     }
     .feat-post-container:hover {
@@ -142,25 +150,25 @@ main {
         #feat-informal-discription {
             display: none;
         }
-    .link-container {
-        justify-content: center;
-        display: flex;
-        margin-bottom: -20px ;
-        padding: 15px 15px 0;
-        border-right: 4px black solid;
-        flex-wrap: wrap;
-
-    }
+        .link-container {
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            display: block;
+            padding: 15px;
+            border-right: 4px black solid;
+            flex-wrap: wrap;
+        }
         .link-container a {
-            margin: 12px 12px;
-            padding: 12px;
+            display: block;
+            margin-bottom: -18px;
             font-size: 26px;
+            padding: 12px;
+            text-decoration: none;
             background-color: black;
             color: white;
-            display: inline-block;
-            white-space: nowrap;
-            border: 4px black solid;
-            text-decoration: none;
+            border: 4px solid black;
             transition: background-color 0.3s ease;
         }
         .link-container a:hover {
@@ -169,32 +177,4 @@ main {
             text-decoration: underline;
         }
     
-}
-
-@media screen and (max-width: 625px) {
-    .link-container {
-        justify-content: center;
-        text-align: center;
-        width: 100%; /* Ensure each link container takes up the full width */
-        display: block; /* Ensure containers stack vertically */
-        padding: 15px 0;
-        border-right: 4px black solid;
-        flex-wrap: wrap;
-    }
-    .link-container {
-    }
-    
-    .link-container a {
-        display: block;
-        margin-bottom: 0;
-        font-size: 26px;
-        padding: 12px;
-        text-decoration: none;
-        background-color: black;
-        color: white;
-        border: 4px solid black;
-        transition: background-color 0.3s ease;
-    }
-    
-
 }
