@@ -37,17 +37,11 @@ main {
         color: black;
     }
     .feat-content {
-        animation: scroll-animation 31s cubic-bezier(0.3, 0, 1, 1) infinite;
+        animation: scroll-animation 31s linear infinite;
     }
         @keyframes scroll-animation {
         0% {
             transform: translateY(50vh);
-        }
-        5% {
-            transform: translateY(46vh);
-        }
-        10% {
-            transform: translateY(46vh);
         }
         100% {
             transform: translateY(-100%);

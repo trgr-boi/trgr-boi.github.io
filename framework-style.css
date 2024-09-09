@@ -1,9 +1,12 @@
 @font-face {
     font-family: 'pixel';
-    src: url('fonts/PixelOperatorSC.ttf') format('woff2'),
-         url('fonts/PixelOperatorSC-Bold.ttf') format('woff');
+    src: url('fonts/PixelOperator.ttf') format('woff2');
     font-weight: normal;
-    font-style: normal;
+}
+@font-face {
+    font-family: 'pixel';
+    src: url('fonts/PixelOperator-Bold.ttf') format('woff2');
+    font-weight: bold;
 }
 
 /* BASIC RESET */
@@ -20,7 +23,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #ffffff;
+        background-color: gray;
         font-family: "pixel", sans-serif;
         font-size: 24px;
     }
@@ -34,6 +37,10 @@
         border: none;
         height: 4px;
         background-color: #000000;
+    }
+
+    strong {
+        font-weight: bold;
     }
 
 /* INDIVIDUAL STYLES */
@@ -61,6 +68,7 @@
                 position: absolute;
                 left: 50%;
                 transform: translateX(-50%);
+                font-weight: bold;
             }
         
         /* MENU BAR */
