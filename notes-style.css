@@ -1,0 +1,26 @@
+main {
+    padding: 70px 100px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {  
+    text-align: left;  
+  }
+  
+  th, td {
+    border-bottom: 4px black solid;
+    padding: 12px 10px;
+  }
+  
+  td:last-of-type {
+  }
+  
+@media screen and (max-width: 500px) {
+  main {
+    padding: 40px 10px;
+  }
+}

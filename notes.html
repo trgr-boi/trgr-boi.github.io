@@ -1,113 +1,80 @@
+<!-- This is a template for the site. this is a frame where I'll put the content into -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subliminal-Music.OS</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="src/images/favicon.png" type="image/png">
+    <title>T.R.G.R. - Notes</title>
+    <link rel="stylesheet" href="framework-style.css">
+    <link rel="stylesheet" href="notes-style.css">
 </head>
+
 <body>
-    <script src="script-notes.js"></script>
-
-
-    <div id="terminal-big"> 
-    <!-- Inside border -->
-        
-        <header class="header">
-
-
-            <!--LEFT collumn */-->
-            <div class="column-logo"> 
-
-                <img class="logo" src="src/images/logo.jpg">
-
-            </div>
-
-            <!--right collumn */-->
-            <div class="column-menu">
-
-                <!-- Navigation Menu -->
-                <nav class="nav-menu">
-                    <button class="menu-toggle" id="menu-toggle">
-                        Menu
-                    </button>
-                    <div id="menu" class="popup-menu">
-                        <ul>
-                            <li><a href="about-but">About</a></li>
-                            <li><a href="stream-but">Streaming</a></li>
-                            <li><a href="store-but">Store</a></li>
-                            <li><a href="quit-but">Quit</a></li>
-                        </ul>
-                        <button class="close-menu" id="close-menu">| X |</button>
-
-                    </div>
-                </nav>
-
-        </header>
-        
-        <!-- Main body -->
-        <div class="main-page">
-
-            <!-- Only column (is collumn to work together with other pages) -->
-            <div class="column-2-left-notes">
-        
-                <p style="font-weight: bold;">Notes list</p>
-                <hr style="height: 1px; margin-bottom: 20px;">
-        
-                <!-- List of titles -->
-                <a class="title" href="notes/streaming-music-rant.html" target="_blank" >19/08/2024 >> Streaming Music Rant</a>
-                <a class="title" href="notes/size-of-ego.html" target="_blank" >07/06/2024 >> The size of the ego</a>
-                <a class="title" href="notes/highest-form-of-love.html" target="_blank" >07/06/2024 >> Highest Form of Love</a>
-                <a class="title" href="notes/essentialism.html" target="_blank" >20/04/2024 >> Essentialism</a>
-                <a class="title" href="notes/about-beings.html" target="_blank" >13/04/2024 >> About Beings</a>
-                <a class="title" href="notes/what-are-we.html" target="_blank" >06/03/2024 >> What Are We??</a>
-                <a class="title" href="notes/distancing-yourself.html" target="_blank" >07/01/2024 >> Distancing yourself from the voice in your head</a>
-
-                <!-- Add more titles as needed -->
-            </div>
-            
-            </div>
-        </div>
-        
+    <!-- FRAME -->
+    <div class="frame">
+        <!-- HEADER BAR -->
+         <div class="header-bar">
+            <a class="-header-logo" href="index.html"><img src="src/images/trgr-logo.png" alt="" height="30px" width="30px"></a>
+            <div class="header-title">Notes</div>
+         </div>
+        <!-- MENU HEADER -->
+         <div class="header-menu">
+            <nav>
+                <ul class="menu-links">
+                    <li class="close-btn">&times;</li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="linktree.html">Linktree</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+         </div>
+        <!-- CONTENT IN FRAME -->
+         <main>
+            <p>This is a simple database of the notes I want to share.</p>
+            <br><hr><br>
+            <table>
+                <thead>
+                  <tr>
+                    <th scope="col" style="width:70%">Title</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row"><a href="notes/streaming-music-rant.html">Streaming music rant</a></td>
+                        <td>Rant</td>
+                        <td>10/08/2024</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="notes/essentialism.html">Essentialism</a></td>
+                        <td>Note</td>
+                        <td>12/11/2023</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="notes/distancing-yourself.html">Distancing yourself</a></td>
+                        <td>Rant</td>
+                        <td>30/06/2023</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="notes/about-beings.html">About beings</a></td>
+                        <td>Thought</td>
+                        <td>##/##/####</td>
+                    </tr>
+                    <tr>
+                        <td scope="row"><a href="notes/what-are-we.html">What are we?</a></td>
+                        <td>Thought</td>
+                        <td>##/##/####</td>
+                    </tr>
+                </tbody>
+             </table>
+        </main>
     </div>
-    
-
-    <!-- ABOUT MENU -->
-        <div id="about-popup" class="popup-overlay">
-            <div class="popup-content-about">
-                <p>###</p>
-                <button id="close-about-popup" class="close-popup">| X |</button>
-            </div>
-        </div>
-
-    <!-- STREAM MENU -->
-        <div id="stream-popup" class="popup-overlay">
-            <div class="popup-content">
-                <p>###</p>
-                <button id="close-stream-popup" class="close-popup">| X |</button>
-            </div>
-        </div>
-
-    <!-- STORE MENU -->
-        <div id="store-popup" class="popup-overlay">
-            <div class="popup-content">
-                <p>###</p>
-                <button id="close-popup" class="close-popup">| X |</button>
-            </div>
-        </div>
-
-    <!-- QUIT MENU -->
-        <div id="quit-popup" class="popup-overlay">
-            <div class="popup-content">
-                <h3>Are you sure you want to go back?</h3>
-                <h3>This will close the program!</h3>
-                <a href="index.html" class="store-link">Yes</a>
-                <a href="index.html" target="_blank" class="store-link">Yes, but play it safe :)</a>
-                <button id="close-quit-popup" class="close-popup">| No |</button>
-            </div>
-        </div>
-
+<script src="framework-script.js"></script>
 </body>
-
-</html>

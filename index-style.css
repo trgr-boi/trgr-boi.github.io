@@ -1,0 +1,21 @@
+main {
+    padding: 70px 100px;
+    background-color: #ffffff;
+    justify-content: center;
+
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 4px black solid;
+    margin-bottom: 12px;
+}
+
+p {
+}
+
+@media screen and (max-width: 500px) {
+    main {
+      padding: 40px 10px;
+    }
+  }

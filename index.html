@@ -1,32 +1,46 @@
+<!-- This is a template for the site. this is a frame where I'll put the content into -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Subliminal-Terminal.OS</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="src/images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="src/images/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="64x64" href="src/images/favicon-64x64.png">
-    <link rel="icon" type="image/png" href="src/images/favicon.png">
+    <title>T.R.G.R.</title>
+    <link rel="stylesheet" href="framework-style.css">
+    <link rel="stylesheet" href="index-style.css">
 </head>
+
 <body>
-    <div id="terminal">
-        
-        <!-- Inside terminal -->
-        
-        <img class="logo" src="src/images/logo.jpg">
-
-        <div class="text">
-        <!-- Inside text area -->
-
-            <div id="output"></div> <!-- Outputs text -->
-            <div id="input-container"> <!--bar of text -->
-                <span>>guest/~terminal.OS//:</span>
-                <input class="text-container" type="text" id="command-input" autocomplete="off">
-            </div>
-        </div>
+    <!-- FRAME -->
+    <div class="frame">
+        <!-- HEADER BAR -->
+         <div class="header-bar">
+            <a class="-header-logo" href="index.html"><img src="src/images/trgr-logo.png" alt="" height="30px" width="30px"></a>
+            <div class="header-title">Home</div>
+         </div>
+        <!-- MENU HEADER -->
+         <div class="header-menu">
+            <nav>
+                <ul class="menu-links">
+                    <li class="close-btn">&times;</li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="linktree.html">Linktree</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </nav>
+         </div>
+        <!-- CONTENT IN FRAME -->
+         <main>
+            <h2>Welcome</h2>
+            <p>Welcome to my site. This page is still in the making. I don't really know what to put here yet...<br>I'll add some links to my projects for now.</p>
+            <br><h2>Quick Links</h2>
+            <a href="notes.html">Notes</a>
+        </main>
     </div>
-    <script src="script-main-page.js"></script>
+<script src="framework-script.js"></script>
 </body>
-</html>

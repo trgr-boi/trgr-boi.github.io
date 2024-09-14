@@ -1,10 +1,15 @@
 body {
-    background-color: #040D12;
-    color: #93B1A6;
-
+    background-color: white;
+    color: black;
+    font-family: pixel;
+    padding: 40px 20vw;
+}
+.link {
+    color: red;
 }
 
-.link {
-    color: #872341;
-
+@media screen and (max-width: 500px) {
+    body {
+        padding: 40px 5vw;
+    }
 }
