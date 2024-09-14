@@ -1,15 +1,14 @@
 body {
-    background-color: white;
+    background-color: #f0f0f0;
     color: black;
-    font-family: pixel;
-    padding: 40px 20vw;
+    padding: 40px calc(20vw + 10px);
 }
 .link {
     color: red;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 830px) {
     body {
-        padding: 40px 5vw;
+        padding: 40px calc(5vw + 10px);
     }
 }

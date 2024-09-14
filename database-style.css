@@ -16,9 +16,6 @@ table {
     padding: 12px 10px;
   }
   
-  td:last-of-type {
-  }
-  
 @media screen and (max-width: 500px) {
   main {
     padding: 40px 10px;
