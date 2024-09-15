@@ -10,11 +10,24 @@
 
     document.body.addEventListener('click', function() {
         var textarea = document.getElementById('command-input');
-        textarea.focus(); // Set focus to the textarea
+        textarea.focus(); // Set focus to the textarea        
     });
     window.addEventListener('DOMContentLoaded', function () {
         var textarea = document.getElementById('command-input');
         textarea.focus(); // Set focus to the textarea
+        // Add starter text when the page loads
+        appendOutput(
+        `<pre class="color1">
+ _____     _   _ _       _         _
+|   __|_ _| |_| |_|_____|_|___ ___| |  ___ ___
+|__   | | | . | | |     | |   | .'| |_| . |_ -|
+|_____|___|___|_|_|_|_|_|_|_|_|__,|_|_|___|___|
+</pre>`
+    );
+
+        appendOutput('<span>Welcome to Subliminal.OS. You are on the home page.<br>Type </span>');
+        appendOutput('<span>help', 'color1');
+        appendOutput(' to get started.</span><br><br>');
     });
 
     inputField.addEventListener('keydown', function (event) {
@@ -53,6 +66,8 @@
             showFiles();
         } else if (command.toLowerCase() === 'depo') {
             window.open('https://github.com/Trigger-BOI');
+        } else if (command.toLowerCase() === 'shutdown') {
+            window.location.href = '../index.html';
         } else if (command.toLowerCase() === 'liefje') {
             showLiefje();
         } else if (command.toLowerCase() === 'suki') {
@@ -88,6 +103,11 @@
         }
     }
 
+    function appendOutput(output, className) {
+        outputDiv.innerHTML += '<span class="' + className + '">' + output + '</span>';
+        outputDiv.scrollTop = outputDiv.scrollHeight;
+    }
+    
     function showHelp() {
         appendOutput('Available commands:<br>');
         appendOutput('about', 'color1');
@@ -100,6 +120,8 @@
         appendOutput(' - browse local files.<br><br>');
         appendOutput('help', 'color1');
         appendOutput(' - You clearly know how to use this.<br>');
+        appendOutput('shutdown', 'color1');
+        appendOutput(' - Shutdown the terminal.<br>');
         appendOutput('clear', 'color1');
         appendOutput(' - clear the terminal.<br>')
     }
@@ -122,27 +144,24 @@
     function showFiles() {
         appendOutput('Files are still uploading...<br>Try again later.<br>');
     }
-
+    
     function clearOutput() {
         outputDiv.innerHTML = ''; // Clears the content of the output div
     }
-
-    function appendOutput(output, className) {
-        outputDiv.innerHTML += '<span class="' + className + '">' + output + '</span>';
-        outputDiv.scrollTop = outputDiv.scrollHeight;
-    }
-
+    
+    
     function showLiefje() {
         appendOutput('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣤⣤⣤⣤⣤⣤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠶⠟⠛⠛⠉⠉⠉⠁⠀⠀⠈⠉⠉⠙⠛⠿⢶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠀⠀⣠⠖⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⢠⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢷⣄⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀<br>⠀⠀⠀⣠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⠀⠀⠹⣧⡀⠀⠀⠀⡏⠉⠙⠋⢹⡆<br>⠀⠀⢠⡿⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠚⠉⠉⠛⠿⣦⡀⠀⠸⣷⡀⠀⠀⠹⣄⠀⠠⡹⠃<br>⠀⢀⣿⠃⠀⠀⠀⠀⣠⣶⠾⠟⠛⠉⠉⠛⠿⣶⣄⠀⠀⠀⠀⣰⠃⢀⣠⣤⣄⠀⠈⢻⣦⠀⢻⣧⠀⠀⠀⠈⠓⠋⠀⠀<br>⠀⢸⣿⠀⠀⠀⣠⣾⠋⠁⠀⠀⢀⣠⣤⣤⣤⣈⠙⣷⣄⠀⢠⣏⣶⣿⣿⣿⣿⣿⣦⠀⢻⣧⠘⣿⢀⢸⡛⠛⢲⠀⠀⠀<br>⠀⣾⡇⠀⠀⢠⡿⠁⠀⠀⣠⣾⡿⢿⣿⣿⣿⣿⣷⣌⢿⣆⢸⣿⡋⠉⢉⣿⣿⣿⣿⣧⠈⣿⠀⣿⣿⠀⠹⠶⠋⠀⠀⠀<br>⠈⡟⣿⠀⠀⢸⠇⠀⢀⣼⣄⠈⠀⣸⣿⣿⣿⣿⣿⣿⡎⣿⣿⣿⣿⣶⣿⣻⣿⣿⣿⣿⣤⣿⢀⣿⣿⠀⠀⠀⠀⠀⠀⠀<br>⠀⢷⢹⡆⠀⢸⡄⠀⣾⣿⣿⣿⣿⣿⣩⣿⣿⣿⣿⣿⣇⣿⢹⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⠏⣸⢧⠏⠀⠀⠀⠀⠀⠀⠀<br>⠀⠈⣇⢳⡀⠈⢧⠐⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⠏⢠⢁⡞⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠈⢎⠃⠀⠈⠳⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⠟⠁⠀⠀⠈⠻⣿⣿⣿⣿⡿⠟⠁⠀⣠⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠈⠳⣄⠀⠀⠈⠙⡻⠿⢿⣿⡿⠿⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠈⠉⠃⣀⡀⣰⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⣀⡤⠬⣷⣄⡲⣤⣈⠀⠈⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⡴⢛⡵⠚⠁⠀⢀⣠⣤⣀⡀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠸⣇⠀⠀⠀⢻⣿⠒⠭⣟⣷⢶⣤⣤⣤⣤⣤⣤⣤⣤⣶⢾⣟⠯⠗⠊⠁⠀⠀⠀⣾⠟⠁⠀⢘⣿⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⢹⣧⠀⠀⠈⣿⡄⠀⠀⠈⠉⠛⠛⠛⠛⠛⠒⠋⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⢸⡿⠀⠀⢠⣿⠏⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⣠⣿⠇⠀⠀⠙⠛⠛⠒⠒⠛⠛⠛⠻⠿⢷⡢⣤⣔⡶⠿⠟⠛⠛⠛⠻⠿⠽⠟⠁⠀⠀⢺⡿⡄⠀⠀⠀⠀⠀⠀<br>⠀⠀⢰⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣾⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡀⠀⠀⠀⠀⠀<br>⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠻⢿⣿⠒⠲⠛⠙⠲⠦⢼⣿⡿⠟⠛⠃⠀⠀⠀⠀⠀⠀⠀⢸⣇⡇⠀⠀⠀⠀⠀<br>⠀⠀⠹⠿⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠇⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⡻⠃⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠈⠻⢦⣀⠀⠀⠀⠀⠀⠀⢀⡾⡿⠀⠀⠀⠀⠀⠀⠘⣿⣆⠀⠀⠀⠀⠀⠀⢀⣠⣴⢯⠞⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠀⠀⠀⠉⠛⠳⠶⠶⠶⣖⡿⠚⠁⠀⠀⠀⠀⠀⠀⠀⠘⠮⣷⣶⡤⡤⠴⠾⠟⠋⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>')
     }
-
+    
     function showSuki() {
         appendOutput('Hey liefje<br><br>Ik zie jou zo suuuuper graag. Sorry dat dit er niet van het begin <br>in verstopt zat voor jou.<br>')
         appendOutput('Dankje voor mij leukde ideetjes the geven voor dingen te verstoppen :)<br>I love YOU <333<br><br>')
         appendOutput('Veel liede,<br>Jouw liefje<br><br>')
     }
-
+    
     function showTestCode() {
         appendOutput('Test succesful<br>')
     }
+
 })();

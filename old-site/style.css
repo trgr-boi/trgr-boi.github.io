@@ -16,7 +16,7 @@ hr {
 }
 
 #terminal {
-    width: 60vw;
+    width: 90vw;
     height: calc(100vh - 100px);
     margin: 20px;
     padding: 20px;
@@ -32,7 +32,7 @@ hr {
     padding: 25px 50px;
     height: calc(100% - 55px);
     overflow: auto;
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    overflow-y: auto;
     font-size: 14px;
 }
 
@@ -74,4 +74,35 @@ hr {
 /* Darker text*/
 .color2{ 
     color: #183D3D;
+}
+
+/* PHONE LAYOUT */
+@media screen and (max-width: 720px) {
+    #terminal {
+        width: 100vw;
+        height: 102vh;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .text {
+        font-size: 12px;
+        padding: 25px 10px;
+        border-radius: 0px;
+    }
+
+    #output {
+        font-size: 12px;
+    }
+
+    .text-container {
+        font-size: 12px;
+    }
+    .text-container span {
+        font-size: 12px;
+    }
+
+    #input-container span {
+        font-size: 12px;
+    }
 }

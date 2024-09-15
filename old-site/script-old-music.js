@@ -11,11 +11,11 @@
     
 // Define an array of songs with index numbers
     var songs = [
-        { index: 1, title: 'Subliminal - volca modular jam #1', file: '1.mp3', info: "Jam with the Korg Volca Modulair I make ar 2 a.m.<br><br> Links will folow when uploaded." },
-        { index: 2, title: 'Subliminal - Metaphysical Roadtrip #1', file: '2.mp3', info: "Intro for a upcoming album. It will take you on a journey trough sound design and experimentation of frequenties. <br> Testlink of another album I made: <br><br> Spotify: <br> https://open.spotify.com/album/2nXer5DOFz6nrJKkOOax5y?si=9EGkgiE2QdapyP7rPmetqQ <br><br> soundcloud: <br> https://soundcloud.com/trigger_boi/sets/primal-instincts <br><br> Other links..." },
-        { index: 3, title: 'Subliminal - Planetary Decent', file: '3.mp3', info: 'A song of my jungle set I made for a live performance at a vinyl convention organized by a friend of mine. <br><br> Links will folow when uploaded.'},
-        { index: 4, title: 'Subliminal - Subterranean Pulse', file: '4.mp3', info: 'A song of my jungle set I made for a live performance at a vinyl convention organized by a friend of mine. <br><br> Links will folow when uploaded.'},
-        { index: 5, title: 'Who is Subliminal?', file: 'who-is.mp3', info: 'Audio for the promotional video. Yet to be released...<br><br> Links will folow when uploaded.',}
+        { index: 1, title: 'SOUNDSCAPE_01', file: 'SOUNDSCAPE_01.mp3', info: "TEST TEXT" },
+        { index: 2, title: 'SOUNDSCAPE_02', file: 'SOUNDSCAPE_02.mp3', info: "Intro for a upcoming album. It will take you on a journey trough sound design and experimentation of frequenties. <br> Testlink of another album I made: <br><br> Spotify: <br> https://open.spotify.com/album/2nXer5DOFz6nrJKkOOax5y?si=9EGkgiE2QdapyP7rPmetqQ <br><br> soundcloud: <br> https://soundcloud.com/trigger_boi/sets/primal-instincts <br><br> Other links..." },
+        { index: 3, title: 'SOUNDSCAPE_03', file: 'SOUNDSCAPE_03.mp3', info: 'A song of my jungle set I made for a live performance at a vinyl convention organized by a friend of mine. <br><br> Links will folow when uploaded.'},
+        { index: 4, title: 'SOUNDSCAPE_ALPHA', file: 'SOUNDSCAPE_ALPHA.mp3', info: 'A song of my jungle set I made for a live performance at a vinyl convention organized by a friend of mine. <br><br> Links will folow when uploaded.'},
+        { index: 5, title: 'volca modular jam - #1', file: 'volca modular jam - 1.mp3', info: 'Jam with the Korg Volca Modulair I make at 2 a.m.<br><br> Links will folow when uploaded.',}
     ];
     
  // Set focus to the input field by clicking anywhere
@@ -26,7 +26,19 @@
  // Set focus to the input field on load
     window.addEventListener('DOMContentLoaded', function () {
         inputField.focus();
-    });
+        appendOutput(
+            `<pre class="color1">
+ _____     _   _ _       _         _
+|   __|_ _| |_| |_|_____|_|___ ___| |  ___ ___
+|__   | | | . | | |     | |   | .'| |_| . |_ -|
+|_____|___|___|_|_|_|_|_|_|_|_|__,|_|_|___|___|
+    </pre>`
+        );
+    
+            appendOutput('<span>Welcome to Subliminal.OS. You are on the music page.<br>This is a very impractical way of doing this.<br>Type </span>');
+            appendOutput('<span>help', 'color1');
+            appendOutput(' to get started.</span><br><br>');
+        });
     
 // Links 'enterkey' to execute command
     inputField.addEventListener('keydown', function (event) {
@@ -165,7 +177,7 @@
     if (selectedSong) {
         appendOutput('Playing ' + selectedSong.title + "...<br>");
         appendOutput("Don't refresh terminal!<br>", 'color1');
-        currentAudio = new Audio('src/audio/' + selectedSong.file);
+        currentAudio = new Audio('../src/audio/' + selectedSong.file);
         currentAudio.play();
     } else {
         appendOutput("Song with index " + songIndex + " not found.<br>", 'color1');
