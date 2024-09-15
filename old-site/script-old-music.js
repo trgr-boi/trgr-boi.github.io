@@ -59,7 +59,7 @@
             showHelp();
         } else 
         if (command === 'q') {
-            window.location.href = 'index.html';
+            window.location.href = 'terminal.html';
         } else 
         if (command === 'clear') {
             clearOutput();

@@ -49,20 +49,14 @@
             clearOutput();
         } else if (command.toLowerCase() === 'music') {
             window.location.href = 'music.html';
-        } else if (command.toLowerCase() === 'old-music') {
-            window.location.href = 'old-music.html';
         } else if (command.toLowerCase() === 'files') {
             showFiles();
-        } else if (command.toLowerCase() === 'notes') {
-            window.location.href = 'notes.html';
         } else if (command.toLowerCase() === 'depo') {
             window.open('https://github.com/Trigger-BOI');
         } else if (command.toLowerCase() === 'liefje') {
             showLiefje();
         } else if (command.toLowerCase() === 'suki') {
             showSuki();
-        } else if (command.toLowerCase() === 'linktree') {
-            window.location.href = 'linktree.html';
         } else if (command.toLowerCase() === 'test-code') {
             appendOutput('Enter the password to access:<br><br>', 'color1');
             awaitingPassword = true;
@@ -102,12 +96,6 @@
         appendOutput(' - Who even am I?<br>');
         appendOutput('depo', 'color1');
         appendOutput(' - go to Github page.<br><br>');
-        appendOutput('music', 'color1');
-        appendOutput(' - open music program.<br>');
-        appendOutput('notes', 'color1');
-        appendOutput(' - open notes program<br>');
-        appendOutput('linktree', 'color1');
-        appendOutput(' - open linktree program<br>');
         appendOutput('files', 'color1');
         appendOutput(' - browse local files.<br><br>');
         appendOutput('help', 'color1');
