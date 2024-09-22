@@ -9,6 +9,7 @@ main {
 }
     #left-column img {
         margin-bottom: 20px;
+        border: 4px black solid;
         box-shadow: 10px 10px 0px black;
         filter: grayscale(100%);
         transition:  0.3s ease;
