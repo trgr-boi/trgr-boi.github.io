@@ -16,7 +16,7 @@ main {
         display: block;
         transition:  0.3s ease;
         text-decoration: underline;
-
+        box-shadow: 10px 10px 0px #000000; /* SHADOW */
         }
         .feat-post-link:hover  {
             text-decoration: none;
@@ -84,20 +84,19 @@ main {
     border-right: 4px black solid;
 }
     .link-container a {
-        font-size: 22px;
-        background-color: black;
-        color: white;
-        padding: 12px;
+        font-size: 20px;
+        color: black;
         display: inline-block;
-        margin-bottom: 10px; /* space between links */
-        border: 4px black solid;
-        text-decoration: none;
-        transition: background-color 0.3s ease;
+        margin-bottom: 3px; /* space between links */
+        text-decoration: underline;
+        transition: 0.3s;
     }
     .link-container a:hover {
-        background-color: white;
-        color: black;
-        text-decoration: underline;
+        padding: 12px;
+
+        background-color: black;
+        color: white;
+        font-size: 25px;
     }
 
 /* Responsive Styles */
@@ -115,6 +114,7 @@ main {
     .feat-post-link {
         width: 100%;
         text-decoration: none;
+        box-shadow: 10px 10px 0px #000000; /* SHADOW */
         transition: 0.3s ease;
         }
         .feat-post-link:hover  {
@@ -167,6 +167,8 @@ main {
         }
         .link-container a:hover {
             background-color: white;
+            font-size: 26px;
+
             color: black;
             text-decoration: underline;
         }

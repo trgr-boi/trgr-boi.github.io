@@ -1,0 +1,101 @@
+main {
+    padding: 30px;
+    display: flex;
+}
+
+#left-column {
+        flex: 1;
+    margin-right: 20px;
+}
+    #left-column img {
+        margin-bottom: 20px;
+        box-shadow: 10px 10px 0px black;
+        filter: grayscale(100%);
+        transition:  0.3s ease;
+    }
+        #left-column img:hover {
+            filter: grayscale(0%);
+            box-shadow: 15px 15px 0px black;
+        }
+    #left-column ul{
+        list-style-type: none;
+    }
+    #left-column ul li {
+        padding: 4px 0;
+    }
+    #left-column ul li a {
+        color: black;
+        transition: 0.3s;
+    }
+    #left-column ul li a:hover {
+        padding: 5px;
+        font-size: 26px;
+        color: white;
+        background-color: black;
+    }
+
+#right-column {
+    flex: 7;
+    margin-left: 20px;
+}
+
+    #text-area {
+        background-color: #343D4B;
+        border: 4px solid black;
+        box-shadow: 10px 10px 0px black;
+        font-family: nerd-mono;
+        transition: 0.3s;
+    }
+    #text-area:hover {
+        box-shadow: 15px 15px 0px black;
+    }
+        #header {
+            padding: 8px 12px;
+            font-size: 14px;
+            color: white;
+            background-color: black;
+        }
+
+        #text {
+            padding: 12px;
+            font-size: 17px;
+        }
+            .color-1 {
+                color: #7CE38B;
+                font-weight: bold;
+            }
+            .color-2 {
+                color: #F4F8A7;
+                font-weight: bold;
+            }
+            .color-3 {
+                color: #F3EDE4;
+            }
+
+@media screen and (max-width: 712px) {
+    main {
+        display: inherit;
+    }
+
+    #left-column {
+        display: flex;
+    }
+        #left-column img {
+            margin-right: 20px;
+        }
+            #left-column ul li {
+                padding: 4px 0;
+            }
+                #left-column ul li a {
+                    font-size: 30px;
+                }
+    #right-column {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 712px) {
+    main {
+        padding: 20px;
+    }
+}
