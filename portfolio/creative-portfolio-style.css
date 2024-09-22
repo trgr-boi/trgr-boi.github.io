@@ -54,7 +54,22 @@ body {
         gap: 3px; /* Add some space between the images */
         width: 100vw;
         }
+        #small-works-big img{
+            width: 100vw;
+            height: auto;
+
+        }
+        #small-works-big video {
+            width: 100vw;
+            height: auto;
+
+        }
         #small-works img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        #small-works video {
             width: 100%;
             height: auto;
             display: block;
