@@ -24,8 +24,7 @@
 |_____|___|___|_|_|_|_|_|_|_|_|__,|_|_|___|___|
 </pre>`
     );
-
-        appendOutput('<span>Welcome to Subliminal.OS. You are on the home page.<br>Type </span>');
+        appendOutput('<span>Welcome to Subliminal.OS. You are on the HOME page.<br>Type </span>');
         appendOutput('<span>help', 'color1');
         appendOutput(' to get started.</span><br><br>');
     });

@@ -32,10 +32,9 @@
 |   __|_ _| |_| |_|_____|_|___ ___| |  ___ ___
 |__   | | | . | | |     | |   | .'| |_| . |_ -|
 |_____|___|___|_|_|_|_|_|_|_|_|__,|_|_|___|___|
-    </pre>`
+</pre>`
         );
-    
-            appendOutput('<span>Welcome to Subliminal.OS. You are on the music page.<br>This is a very impractical way of doing this.<br>Type </span>');
+            appendOutput('<span>Welcome to Subliminal.OS. You are on the MUSIC page.<br>This is a very impractical way of doing this.<br>Type </span>');
             appendOutput('<span>help', 'color1');
             appendOutput(' to get started.</span><br><br>');
         });
