@@ -45,7 +45,9 @@
         }
     });
 
-    function executeCommand(command) {
+    
+    // Commands
+     function executeCommand(command) {
 
         appendOutput('>guest/~terminal.OS//: ' + command + '<br>', 'color2');
         commandHistory.push(command);
@@ -67,17 +69,25 @@
             window.open('https://github.com/Trigger-BOI');
         } else if (command.toLowerCase() === 'shutdown') {
             window.location.href = '../index.html';
-        } else if (command.toLowerCase() === 'liefje') {
-            showLiefje();
-        } else if (command.toLowerCase() === 'suki') {
-            showSuki();
-        } else if (command.toLowerCase() === 'liefjezien') {
-            showCountdown();
-        } else if (command.toLowerCase() === 'test-code') {
+        } else 
+        
+        // VOOR LIEFJE
+        if (command.toLowerCase() === 'help-liefje') {
             appendOutput('Enter the password to access:<br><br>', 'color1');
             awaitingPassword = true;
             currentCommand = command;
-        } else {
+        } else 
+        if (command.toLowerCase() === 'mail') {
+            showGedichtjeList();
+        } else if (command.toLowerCase() === 'mail -20/09') {
+            showG1();
+        } else if (command.toLowerCase() === 'mail -26/09') {
+            showG2();
+        } else if (command.toLowerCase() === 'liefje-zien') {
+            showCountdown();
+        } else 
+        // IF NOT MATCHED
+        {
             appendOutput("Unknown command: '" + command + "'.<br>Type '");
             appendOutput("help", 'color1');
             appendOutput("' for available commands.<br>");
@@ -85,10 +95,10 @@
     }
 
     function checkPassword(password) {
-        const correctPassword = "0000";
+        const correctPassword = "Miss-Phawa";
         if (password === correctPassword) {
             appendOutput('Access granted.<br><br>', 'color1');
-            showTestCode(); // Execute the command
+            showHelpLiefje(); // Execute the command
         } else {
             appendOutput('Incorrect password. Access denied.<br><br>', 'color1');
         }
@@ -149,18 +159,42 @@
     function clearOutput() {
         outputDiv.innerHTML = ''; // Clears the content of the output div
     }
-    
-    
-    function showLiefje() {
-        appendOutput('⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⣤⣤⣤⣤⣤⣤⣤⣤⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠶⠟⠛⠛⠉⠉⠉⠁⠀⠀⠈⠉⠉⠙⠛⠿⢶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠀⠀⣠⠖⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⢷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⢠⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢷⣄⠀⠀⠀⠀⠀⢀⣀⠀⠀⠀⠀<br>⠀⠀⠀⣠⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣀⠀⠀⠀⠹⣧⡀⠀⠀⠀⡏⠉⠙⠋⢹⡆<br>⠀⠀⢠⡿⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠚⠉⠉⠛⠿⣦⡀⠀⠸⣷⡀⠀⠀⠹⣄⠀⠠⡹⠃<br>⠀⢀⣿⠃⠀⠀⠀⠀⣠⣶⠾⠟⠛⠉⠉⠛⠿⣶⣄⠀⠀⠀⠀⣰⠃⢀⣠⣤⣄⠀⠈⢻⣦⠀⢻⣧⠀⠀⠀⠈⠓⠋⠀⠀<br>⠀⢸⣿⠀⠀⠀⣠⣾⠋⠁⠀⠀⢀⣠⣤⣤⣤⣈⠙⣷⣄⠀⢠⣏⣶⣿⣿⣿⣿⣿⣦⠀⢻⣧⠘⣿⢀⢸⡛⠛⢲⠀⠀⠀<br>⠀⣾⡇⠀⠀⢠⡿⠁⠀⠀⣠⣾⡿⢿⣿⣿⣿⣿⣷⣌⢿⣆⢸⣿⡋⠉⢉⣿⣿⣿⣿⣧⠈⣿⠀⣿⣿⠀⠹⠶⠋⠀⠀⠀<br>⠈⡟⣿⠀⠀⢸⠇⠀⢀⣼⣄⠈⠀⣸⣿⣿⣿⣿⣿⣿⡎⣿⣿⣿⣿⣶⣿⣻⣿⣿⣿⣿⣤⣿⢀⣿⣿⠀⠀⠀⠀⠀⠀⠀<br>⠀⢷⢹⡆⠀⢸⡄⠀⣾⣿⣿⣿⣿⣿⣩⣿⣿⣿⣿⣿⣇⣿⢹⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⠏⣸⢧⠏⠀⠀⠀⠀⠀⠀⠀<br>⠀⠈⣇⢳⡀⠈⢧⠐⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠈⢿⣿⣿⣿⣿⣿⣿⣿⣿⠏⢠⢁⡞⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠈⢎⠃⠀⠈⠳⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣾⠟⠁⠀⠀⠈⠻⣿⣿⣿⣿⡿⠟⠁⠀⣠⠎⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠈⠳⣄⠀⠀⠈⠙⡻⠿⢿⣿⡿⠿⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠈⠉⠃⣀⡀⣰⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⣀⡤⠬⣷⣄⡲⣤⣈⠀⠈⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⡴⢛⡵⠚⠁⠀⢀⣠⣤⣀⡀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠸⣇⠀⠀⠀⢻⣿⠒⠭⣟⣷⢶⣤⣤⣤⣤⣤⣤⣤⣤⣶⢾⣟⠯⠗⠊⠁⠀⠀⠀⣾⠟⠁⠀⢘⣿⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⢹⣧⠀⠀⠈⣿⡄⠀⠀⠈⠉⠛⠛⠛⠛⠛⠒⠋⠛⠉⠉⠀⠀⠀⠀⠀⠀⠀⢸⡿⠀⠀⢠⣿⠏⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⣠⣿⠇⠀⠀⠙⠛⠛⠒⠒⠛⠛⠛⠻⠿⢷⡢⣤⣔⡶⠿⠟⠛⠛⠛⠻⠿⠽⠟⠁⠀⠀⢺⡿⡄⠀⠀⠀⠀⠀⠀<br>⠀⠀⢰⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣾⡁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢻⣿⡀⠀⠀⠀⠀⠀<br>⠀⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠻⢿⣿⠒⠲⠛⠙⠲⠦⢼⣿⡿⠟⠛⠃⠀⠀⠀⠀⠀⠀⠀⢸⣇⡇⠀⠀⠀⠀⠀<br>⠀⠀⠹⠿⣧⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠇⠀⠀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡾⡻⠃⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠈⠻⢦⣀⠀⠀⠀⠀⠀⠀⢀⡾⡿⠀⠀⠀⠀⠀⠀⠘⣿⣆⠀⠀⠀⠀⠀⠀⢀⣠⣴⢯⠞⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠀⠀⠀⠉⠛⠳⠶⠶⠶⣖⡿⠚⠁⠀⠀⠀⠀⠀⠀⠀⠘⠮⣷⣶⡤⡤⠴⠾⠟⠋⠚⠁⠀⠀⠀⠀⠀⠀⠀⠀<br>⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀<br>')
-    }
-    
-    function showSuki() {
-        appendOutput('Hey liefje<br><br>Ik zie jou zo suuuuper graag. Sorry dat dit er niet van het begin <br>in verstopt zat voor jou.<br>')
-        appendOutput('Dankje voor mij leukde ideetjes the geven voor dingen te verstoppen :)<br>I love YOU <333<br><br>')
-        appendOutput('Veel liede,<br>Jouw liefje<br><br>')
-    }
 
+// VOOR LIEFJE
+    function showHelpLiefje() {
+        appendOutput("Available commands:<br>");
+        appendOutput('help-liefje', 'color1');
+        appendOutput(' - Shows Liefje commands.<br>');
+        appendOutput('mail', 'color1');
+        appendOutput(' - Personal mail client <br>');
+        appendOutput('liefje-zien', 'color1');
+        appendOutput(' - Countdown until happiness.<br>');
+
+    }
+    function showGedichtjeList() {
+        appendOutput('═╣ INBOX ╠═<br>')
+        appendOutput('mail -26/09', 'color1');
+        appendOutput(' - Ik mis jou zo hard <br>');
+        appendOutput('mail -20/09', 'color1');
+        appendOutput(' - Op weg naar Bilbao <br>');
+        appendOutput('<br>Type ');
+        appendOutput('mail -[date]', 'color1');
+        appendOutput(' voor de mail te tonen.<br>');
+    }
+        function showG1() {
+            appendOutput("Op weg naar Bilbao<br><br>");
+            appendOutput("Je reis begint, de wereld wacht,<br>Een nieuwe stad, een nieuwe kracht.<br>Zes maanden lang, jij daar, ik hier,<br>Maar in mijn hart ben jij steeds weer.<br><br>");
+            appendOutput("De Spaanse zon, de oceaan,<br>Een avontuur waar jij voor gaat.<br>Ik mis je nu, maar ben zo trots,<br>Op alles wat je doet, je moed, je trots.<br>");
+            appendOutput("Dus vlieg maar hoog, ga maar vrij,<br>Ik ben hier altijd, dichtbij.<br>Na zes maanden, als je terug bent,<br>Zijn we weer samen, hand in hand.<br><br>20/09/2024<br><br>")
+        }
+        function showG2() {
+            appendOutput('Hey liefje<br><br>');
+            appendOutput('Ik begin jou echt heel veel te missen. Vandaag heel de dag aan jou denken en jou graag willen horen.<br> Ik ben zo blij dat jij mijn liefje bent weet niet aan wat ik jou heb verdient. jij bent een prachtig persoon en ik hoop dat jij voor altijd mijn liefje blijft.<br>');
+            appendOutput('Ookal voelt het lang dat we elkaar niet gaan zien, tot snel. Jij bent voor altijd aanwezig in mijn hartje.<br><br>');
+            appendOutput('Heel veel liefde<br>Jouw liefje <3<br>')
+        }
+
+    // countdown
     function showCountdown() {
         const targetDate = new Date(2024, 10, 8); // Months are 0-indexed in JS, so November is 10
         const currentDate = new Date();
@@ -174,10 +208,6 @@
         } else {
             appendOutput(`Nog ${daysRemaining - 1} dagen en ik zie liefje!!!<br>`);
         }
-    }
-    
-    function showTestCode() {
-        appendOutput('Test succesful<br>')
     }
 
 })();
