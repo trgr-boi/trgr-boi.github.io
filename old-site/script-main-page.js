@@ -71,6 +71,8 @@
             showLiefje();
         } else if (command.toLowerCase() === 'suki') {
             showSuki();
+        } else if (command.toLowerCase() === 'liefjezien') {
+            showCountdown();
         } else if (command.toLowerCase() === 'test-code') {
             appendOutput('Enter the password to access:<br><br>', 'color1');
             awaitingPassword = true;
@@ -157,6 +159,21 @@
         appendOutput('Hey liefje<br><br>Ik zie jou zo suuuuper graag. Sorry dat dit er niet van het begin <br>in verstopt zat voor jou.<br>')
         appendOutput('Dankje voor mij leukde ideetjes the geven voor dingen te verstoppen :)<br>I love YOU <333<br><br>')
         appendOutput('Veel liede,<br>Jouw liefje<br><br>')
+    }
+
+    function showCountdown() {
+        const targetDate = new Date(2024, 10, 8); // Months are 0-indexed in JS, so November is 10
+        const currentDate = new Date();
+    
+        // Calculate the difference in days
+        const timeDiff = targetDate.getTime() - currentDate.getTime();
+        const daysRemaining = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+    
+        if (daysRemaining <= 0) {
+            appendOutput("The target date has already passed or is today!<br>");
+        } else {
+            appendOutput(`Nog ${daysRemaining - 1} dagen en ik zie liefje!!!<br>`);
+        }
     }
     
     function showTestCode() {

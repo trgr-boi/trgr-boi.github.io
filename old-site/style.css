@@ -25,8 +25,9 @@
 
 body {
     font-family: nerd-mono;
-    background-color: #1a1e25;
-    color: #efefeb;
+    line-height: 1.2;
+    background-color: #2E3440;
+    color: #ECEFF4;
     display: flex;
     justify-content: center;
     min-height: 100vh;
@@ -35,7 +36,7 @@ body {
 }
 hr {
     height: 2px;
-    background-color: #efefeb;
+    background-color: #ECEFF4;
     border: none;
     margin: 10px 0;
 }
@@ -52,7 +53,7 @@ hr {
 
 .text {
     margin-top: 0px;
-    background-color: #343D4B;
+    background-color: #2E3440;
     border-radius: 10px;
     padding: 25px 50px;
     height: calc(100% - 55px);
@@ -73,8 +74,8 @@ hr {
 
 /* text area */
 .text-container {
-    background-color: #343D4B;
-    font-family: monospace;
+    background-color: #2E3440;
+    font-family: nerd-mono;
     font-size: 15px;
     color: #efefeb;
     width: 370px;
@@ -88,17 +89,17 @@ hr {
     font-size: 15px;
     padding-top: 1px;
     margin-right: 1px;
-    color: #686767;
+    color: #4C566A;
 }
 
 /* Brighter text*/
 .color1{
-    color: #ec675d;
+    color: #BF616A;
 }
 
 /* Darker text*/
 .color2{ 
-    color: #686767;
+    color: #4C566A;
 }
 
 /* PHONE LAYOUT */
