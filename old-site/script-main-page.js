@@ -208,6 +208,7 @@
         } else {
             appendOutput(`Nog ${daysRemaining} dagen en ik zie liefje!!!<br>`);
         }
-    }
+    } 
+    
 
 })();
