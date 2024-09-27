@@ -72,17 +72,21 @@
         } else 
         
         // VOOR LIEFJE
-        if (command.toLowerCase() === 'help-liefje') {
+        if (command.toLowerCase() === 'help -liefje') {
             appendOutput('Enter the password to access:<br><br>', 'color1');
             awaitingPassword = true;
             currentCommand = command;
         } else 
         if (command.toLowerCase() === 'mail') {
-            showGedichtjeList();
-        } else if (command.toLowerCase() === 'mail -20/09') {
-            showG1();
-        } else if (command.toLowerCase() === 'mail -26/09') {
-            showG2();
+            showMail();
+        } else if (command.toLowerCase() === 'mail -23/09') {
+            showMail1();
+        } else if (command.toLowerCase() === 'mail -27/09') {
+            showMail2();
+        /* COPY FOR NEW MAIL
+        } else if (command.toLowerCase() === 'mail -dd/mm') {
+            showMailX();
+        */
         } else if (command.toLowerCase() === 'liefje-zien') {
             showCountdown();
         } else 
@@ -163,7 +167,7 @@
 // VOOR LIEFJE
     function showHelpLiefje() {
         appendOutput("Available commands:<br>");
-        appendOutput('help-liefje', 'color1');
+        appendOutput('help -liefje', 'color1');
         appendOutput(' - Shows Liefje commands.<br>');
         appendOutput('mail', 'color1');
         appendOutput(' - Personal mail client <br>');
@@ -171,28 +175,50 @@
         appendOutput(' - Countdown until happiness.<br>');
 
     }
-    function showGedichtjeList() {
-        appendOutput('═╣ INBOX ╠═<br>')
-        appendOutput('mail -26/09', 'color1');
-        appendOutput(' - Ik mis jou zo hard <br>');
-        appendOutput('mail -20/09', 'color1');
-        appendOutput(' - Op weg naar Bilbao <br>');
-        appendOutput('<br>Type ');
-        appendOutput('mail -[date]', 'color1');
-        appendOutput(' voor de mail te tonen.<br>');
+    function showMail() {
+        appendOutput('╔ Mail Inbox ════════════════╗<br>')
+        appendOutput('╟────────────────────┬───────╢<br>');
+        appendOutput('║ Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│ Date &nbsp;║<br>');
+        appendOutput('╟────────────────────┼───────╢<br>');
+        /* COPY NEXT FOR NEW MAIL - lengthe of name MAX 19 characters. IF SHORTER : add '&nbsp' for eatch space on right
+        appendOutput('║ NAME │ ');
+        appendOutput('dd/mm ', 'color1');
+        appendOutput('║<br>')
+        */
+        appendOutput('║ Samen zijn &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp │ ');
+        appendOutput('27/09 ', 'color1');
+        appendOutput('║<br>')
+        appendOutput('║ Ik mis jou zo hard │ ');
+        appendOutput('23/09 ', 'color1');
+        appendOutput('║<br>')
+        appendOutput('╟────────────────────┴───────╢<br>');
+        appendOutput('║ ');
+        appendOutput('mail -[date] ', 'color1');
+        appendOutput('- open mail &nbsp;&nbsp;║<br>');
+        appendOutput('╚════════════════════════════╝<br>');
     }
-        function showG1() {
-            appendOutput("Op weg naar Bilbao<br><br>");
-            appendOutput("Je reis begint, de wereld wacht,<br>Een nieuwe stad, een nieuwe kracht.<br>Zes maanden lang, jij daar, ik hier,<br>Maar in mijn hart ben jij steeds weer.<br><br>");
-            appendOutput("De Spaanse zon, de oceaan,<br>Een avontuur waar jij voor gaat.<br>Ik mis je nu, maar ben zo trots,<br>Op alles wat je doet, je moed, je trots.<br>");
-            appendOutput("Dus vlieg maar hoog, ga maar vrij,<br>Ik ben hier altijd, dichtbij.<br>Na zes maanden, als je terug bent,<br>Zijn we weer samen, hand in hand.<br><br>20/09/2024<br><br>")
-        }
-        function showG2() {
-            appendOutput('Hey liefje<br><br>');
-            appendOutput('Ik begin jou echt heel veel te missen. Vandaag heel de dag aan jou denken en jou graag willen horen.<br> Ik ben zo blij dat jij mijn liefje bent weet niet aan wat ik jou heb verdient. jij bent een prachtig persoon en ik hoop dat jij voor altijd mijn liefje blijft.<br>');
-            appendOutput('Ookal voelt het lang dat we elkaar niet gaan zien, tot snel. Jij bent voor altijd aanwezig in mijn hartje.<br><br>');
-            appendOutput('Heel veel liefde<br>Jouw liefje <3<br>')
-        }
+    /* MAIL TEMPLATE
+    function showMail1() {
+        appendOutput('══ NAME ══<br><br>', 'color1');
+        appendOutput('MAIL CONTENT<br><br>');
+    }
+    */
+    function showMail2() {
+        appendOutput('══ Samen zijn ══<br><br>', 'color1');
+        appendOutput('Hey liefje<br><br>');
+        appendOutput('Ik vind het leuk om samen met jou dingen te doen. Het allerliefste knuffel ik jou maar nu dat efjes niet meer gaat is het super leuk om met jou te bellen. <3<br>');
+        appendOutput('Sorry dat ik gisteren tijdens dat jij Arcane aan het kijken was met andere dingen bezig was. Maar ik was dit aan het maken voor jou. En sorry dat ik al verder had gekeken. Ik kijk het graag opnieuw met jou.<br>');
+        appendOutput('Bekijk dit maar regelmatig want ga hier vaak iets aan toevoegen :) Ik zie jou zo graag.<br><br>');
+        appendOutput('Veel kusjes & liefde xxxx<br>Jouw liefje<br>')
+    }
+    function showMail1() {
+        appendOutput('══ Ik mis jou zo hard ══<br><br>', 'color1');
+        appendOutput('Hey liefje<br><br>');
+        appendOutput('Ik ben jou echt heel veel te missen. Vandaag heel de dag aan jou denken en jou graag willen horen.<br> Ik ben zo blij dat jij mijn liefje bent weet niet aan wat ik jou heb verdient. jij bent een prachtig persoon en ik hoop dat jij voor altijd mijn liefje blijft.<br>');
+        appendOutput('Ookal voelt het lang dat we elkaar niet gaan zien, tot snel. Jij bent voor altijd aanwezig in mijn hartje.<br><br>');
+        appendOutput('Heel veel liefde<br>Jouw liefje <3<br>')
+    }
+
 
     // countdown
     function showCountdown() {
