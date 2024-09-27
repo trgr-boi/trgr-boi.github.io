@@ -196,7 +196,7 @@
 
     // countdown
     function showCountdown() {
-        const targetDate = new Date(2024, 10, 8); // Months are 0-indexed in JS, so November is 10
+        const targetDate = new Date(2024, 10, 8);
         const currentDate = new Date();
     
         // Calculate the difference in days
@@ -206,7 +206,7 @@
         if (daysRemaining <= 0) {
             appendOutput("The target date has already passed or is today!<br>");
         } else {
-            appendOutput(`Nog ${daysRemaining - 1} dagen en ik zie liefje!!!<br>`);
+            appendOutput(`Nog ${daysRemaining} dagen en ik zie liefje!!!<br>`);
         }
     }
 
