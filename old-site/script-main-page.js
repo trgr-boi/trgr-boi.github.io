@@ -79,6 +79,8 @@
         } else 
         if (command.toLowerCase() === 'mail') {
             showMail();
+        } else if (command.toLowerCase() === 'mail -30/09') {
+            showMail3();
         } else if (command.toLowerCase() === 'mail -23/09') {
             showMail1();
         } else if (command.toLowerCase() === 'mail -27/09') {
@@ -166,13 +168,17 @@
 
 // VOOR LIEFJE
     function showHelpLiefje() {
+        appendOutput('<< LIEFLE MODE ACTIVATED >><br><br>', 'color1')
         appendOutput("Available commands:<br>");
-        appendOutput('help -liefje', 'color1');
-        appendOutput(' - Shows Liefje commands.<br>');
+        appendOutput('liefje-zien', 'color1');
+        appendOutput(' - Countdown until happiness.<br><br>');
         appendOutput('mail', 'color1');
         appendOutput(' - Personal mail client <br>');
-        appendOutput('liefje-zien', 'color1');
-        appendOutput(' - Countdown until happiness.<br>');
+        appendOutput('mail -[date] ', 'color1');
+        appendOutput('- open mail &nbsp;&nbsp;║<br>');
+        appendOutput('help -liefje', 'color1');
+        appendOutput(' - Shows Liefje commands.<br>');
+
 
     }
     function showMail() {
@@ -183,8 +189,11 @@
         /* COPY NEXT FOR NEW MAIL - lengthe of name MAX 19 characters. IF SHORTER : add '&nbsp' for eatch space on right
         appendOutput('║ NAME │ ');
         appendOutput('dd/mm ', 'color1');
-        appendOutput('║<br>')
+        appendOutput('║<br>');
         */
+        appendOutput('║ Veel doen &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp │ ');
+        appendOutput('30/09 ', 'color1');
+        appendOutput('║<br>');
         appendOutput('║ Samen zijn &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp │ ');
         appendOutput('27/09 ', 'color1');
         appendOutput('║<br>')
@@ -192,9 +201,6 @@
         appendOutput('23/09 ', 'color1');
         appendOutput('║<br>')
         appendOutput('╟────────────────────┴───────╢<br>');
-        appendOutput('║ ');
-        appendOutput('mail -[date] ', 'color1');
-        appendOutput('- open mail &nbsp;&nbsp;║<br>');
         appendOutput('╚════════════════════════════╝<br>');
     }
     /* MAIL TEMPLATE
@@ -203,6 +209,13 @@
         appendOutput('MAIL CONTENT<br><br>');
     }
     */
+    function showMail3() {
+        appendOutput('══ veel doen ══<br><br>', 'color1');
+        appendOutput('Hey Liefje<br><br>');
+        appendOutput('Ik weet dat je sterk alleen aan het staan bent en dat dat stadsspel een grote tegenslag was, maar ik hoop dat dit jou niet te veel tegenhoud om zulke dingen te blijven doen. Ik weet zeker dat je mensen gaat vinden dat wel voor jou engels willen spreken en waar de af en toe dingentjes mee gaat kunnen doen. Je gaat leuke bezigheden vinden zoals de potten maken en hopelijk daar mensen leren kennen met die zelfde interesse. Jij verdient dat!<br>');
+        appendOutput('Ik wou jou ook gewoon nog eens zeggen dat ik jou super graag zie en dat gamen met jou heel leuk is :) Ik hou zo veel van jou en ga dat blijven doen <3<br><br>');
+        appendOutput('Heel veel liefde<br>Jouw Liefje xxx')
+    }
     function showMail2() {
         appendOutput('══ Samen zijn ══<br><br>', 'color1');
         appendOutput('Hey liefje<br><br>');
