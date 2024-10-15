@@ -18,3 +18,4 @@ fonts/.DS_Store
 # Ignore build artifacts
 /dist/
 /build/
+

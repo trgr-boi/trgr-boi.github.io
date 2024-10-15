@@ -68,7 +68,7 @@
         } else if (command.toLowerCase() === 'depo') {
             window.open('https://github.com/Trigger-BOI');
         } else if (command.toLowerCase() === 'shutdown') {
-            window.location.href = '../index.html';
+            window.location.href = '../../index.html';
         } else 
         
         // VOOR LIEFJE
@@ -85,11 +85,15 @@
             showMail1();
         } else if (command.toLowerCase() === 'mail -27/09') {
             showMail2();
+        } else if (command.toLowerCase() === 'mail -15/10') {
+            showMail4();
+        }
         /* COPY FOR NEW MAIL
         } else if (command.toLowerCase() === 'mail -dd/mm') {
             showMailX();
         */
-        } else if (command.toLowerCase() === 'liefje-zien') {
+       
+        else if (command.toLowerCase() === 'liefje-zien') {
             showCountdown();
         } else 
         // IF NOT MATCHED
@@ -191,6 +195,9 @@
         appendOutput('dd/mm ', 'color1');
         appendOutput('║<br>');
         */
+        appendOutput('║ Trots op jou &nbsp&nbsp&nbsp&nbsp&nbsp │ ');
+        appendOutput('15/10 ', 'color1');
+        appendOutput('║<br>');
         appendOutput('║ Veel doen &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp │ ');
         appendOutput('30/09 ', 'color1');
         appendOutput('║<br>');
@@ -209,6 +216,18 @@
         appendOutput('MAIL CONTENT<br><br>');
     }
     */
+    function showMail4() {
+        appendOutput('══ Trots op jou ══<br><br>', 'color1');
+        appendOutput(`Hey liefje<br>
+            <br>
+            Ik ben super trots op jou. Ik weet dat je het daar moeilijk hebt maar ik ben gewoon zo trots dat je het hebt durven doen en toch aan het doen bent. Ookal mis ik jou super hard maar ik ben blij voor jou dat je deze ervaring kan doen. Ik weet wel dat er stiekem een paar dingen zijn die je leuk vind ;) Want ik heb gehoord dat jij gaan klimmen bent en het leuk vond, hihi. En zelfs een 5c+ geklommen :o. Dat is echt goed! als de gradaties de zelfde moeilijkheid als in België hebben klim je even goed als Manon :).<br>
+            Als ik daar ben gaan we samen gaan klimmen!<br>
+            <br>
+            Ik kijk al uit naar jou te zien liefste. Ik wil zo graag bij jou zijn <3<br>
+            <br>
+            Veel liefde,<br>
+            Jouw liefje.<br>`);            
+    }
     function showMail3() {
         appendOutput('══ veel doen ══<br><br>', 'color1');
         appendOutput('Hey Liefje<br><br>');
