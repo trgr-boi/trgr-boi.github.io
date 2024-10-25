@@ -45,7 +45,7 @@ main {
 }
 
     #text-area {
-        background-color: #343D4B;
+        background-color: #282828;
         border: 2px solid var(--1);
         box-shadow: 10px 10px 0px var(--1);
         font-family: nerd-mono;
@@ -66,15 +66,18 @@ main {
             font-size: 17px;
         }
             .color-1 {
-                color: #7CE38B;
+                color: #928374;
                 font-weight: bold;
             }
             .color-2 {
-                color: #F4F8A7;
+                color: #98971A;
                 font-weight: bold;
             }
             .color-3 {
-                color: #F3EDE4;
+                color: #FBF1C7;
+            }
+            .color-4 {
+                color: #D79921;
             }
 
 @media screen and (max-width: 712px) {

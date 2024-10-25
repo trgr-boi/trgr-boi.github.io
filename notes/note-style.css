@@ -1,11 +1,11 @@
 :root {
-    --1: #ffffff;
-    --2: #000000;
+    --1: #333333;
+    --2: #FFFFFF;
 }
 
 body {
-    background-color: #f0f0f0;
-    color: black;
+    background-color: var(--1);
+    color: var(--2);
     padding: 40px calc(20vw + 10px);
 }
 .link {
