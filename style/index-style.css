@@ -1,15 +1,22 @@
+:root {
+  --1: #ffffff;
+  --2: #000000;
+}
+
 main {
     padding: 70px 100px;
-    background-color: #ffffff;
+    background-color: var(--2);
     justify-content: center;
-
+    color: var(--1);
 }
 
 h2 {
     text-align: center;
-    border-bottom: 4px black solid;
+    border-bottom: 4px var(--2) solid;
     margin-bottom: 12px;
 }
+
+
 
 p {
 }
