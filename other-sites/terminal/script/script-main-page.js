@@ -254,7 +254,7 @@
 
     // countdown
     function showCountdown() {
-        const targetDate = new Date(2024, 10, 8);
+        const targetDate = new Date(2024, 11, 18);
         const currentDate = new Date();
     
         // Calculate the difference in days
