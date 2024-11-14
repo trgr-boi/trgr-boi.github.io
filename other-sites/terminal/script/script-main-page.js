@@ -77,6 +77,7 @@
             awaitingPassword = true;
             currentCommand = command;
         } else 
+        // MAILS
         if (command.toLowerCase() === 'mail') {
             showMail();
         } else if (command.toLowerCase() === 'mail -30/09') {
@@ -87,6 +88,8 @@
             showMail2();
         } else if (command.toLowerCase() === 'mail -15/10') {
             showMail4();
+        } else if (command.toLowerCase() === 'mail -14/11') {
+            showMail5();
         }
         /* COPY FOR NEW MAIL
         } else if (command.toLowerCase() === 'mail -dd/mm') {
@@ -195,6 +198,9 @@
         appendOutput('dd/mm ', 'color1');
         appendOutput('║<br>');
         */
+        appendOutput('║ Terug in België &nbsp&nbsp&nbsp│ ');
+        appendOutput('14/11 ', 'color1');
+        appendOutput('║<br>');
         appendOutput('║ Trots op jou &nbsp&nbsp&nbsp&nbsp&nbsp │ ');
         appendOutput('15/10 ', 'color1');
         appendOutput('║<br>');
@@ -213,9 +219,20 @@
     /* MAIL TEMPLATE
     function showMail1() {
         appendOutput('══ NAME ══<br><br>', 'color1');
-        appendOutput('MAIL CONTENT<br><br>');
+        appendOutput(`MAIL CONTENT<br><br>`);
     }
     */
+    function showMail5() {
+        appendOutput('══ Terug in België ══<br><br>', 'color1');
+        appendOutput(`Dag liefste,<br><br>
+            Het was een super leuk weekend met jou en voel het missen al heel hard. Ik had zelf ook niet volledig door hoe hard ik jou miste tot ik jou terug zag. Het was zo leuk om jou weer te kunnen knuffelen en kusjes te geven.<br>
+            Nu ben ik weer ik België maar de nood voor te knuffelen was nog niet gestild. Ik wou jou nog veel kusjes en knuffeltjes geven maar de dagen vlogen voorbij.<br>
+            Het maakt duidelijk niet uit wat we doen. Het gaat altijd leuk zijn zolang het met jou is. Jij bent de leukste en liefste menace die ik ooit heb mogen leren kennen en ben daar enorm dankbaar voor.<br>
+            Ik kijk zo hard uit naar jou weer te mogen zien.<br><br>
+            Ik zie jou super graag,<br>
+            Liefje<br>
+            `);
+    }
     function showMail4() {
         appendOutput('══ Trots op jou ══<br><br>', 'color1');
         appendOutput(`Hey liefje<br>
