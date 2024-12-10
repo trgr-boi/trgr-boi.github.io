@@ -90,6 +90,8 @@
             showMail4();
         } else if (command.toLowerCase() === 'mail -14/11') {
             showMail5();
+        } else if (command.toLowerCase() === 'mail -10/12') {
+            showMail6();
         }
         /* COPY FOR NEW MAIL
         } else if (command.toLowerCase() === 'mail -dd/mm') {
@@ -198,6 +200,9 @@
         appendOutput('dd/mm ', 'color1');
         appendOutput('║<br>');
         */
+        appendOutput('║ Bijna bij elkaar&nbsp&nbsp │ ');
+        appendOutput('10/12 ', 'color1');
+        appendOutput('║<br>');       
         appendOutput('║ Terug in België &nbsp&nbsp&nbsp│ ');
         appendOutput('14/11 ', 'color1');
         appendOutput('║<br>');
@@ -222,6 +227,15 @@
         appendOutput(`MAIL CONTENT<br><br>`);
     }
     */
+    function showMail6() {
+        appendOutput('══ Bijna bij elkaar ══<br><br>', 'color1');
+        appendOutput(`Hey liefste,<br><br>
+            Ik kijk echt uit om over 8 dagjes bij elkaar te zijn. Wij gaan zo ongelofelijk hard knuffelen. Dat wordt ongezien!<br>
+            Hopelijk kan je het nog een weekje volhouden daar. Zorg maar heel goed voor jouzelf. Verwen jezelf wanneer je tijd hebt en vergeet zeker niet genoeg naar buiten te gaan liefste <3<br><br>
+            Ik zie jou super graag,<br>
+            jouw liefje<br>
+            `);
+    }
     function showMail5() {
         appendOutput('══ Terug in België ══<br><br>', 'color1');
         appendOutput(`Dag liefste,<br><br>
