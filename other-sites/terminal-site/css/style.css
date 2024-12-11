@@ -1,31 +1,31 @@
 @font-face {
     font-family: 'nerd-mono';
-    src: url('../../../src/fonts/AnonymousPro-Regular.ttf') format('truetype');
+    src: url('../src/fonts/AnonymousPro-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 @font-face {
     font-family: 'nerd-mono';
-    src: url('../../../src/fonts/AnonymousPro-Italic.ttf') format('truetype');
+    src: url('../src/fonts/AnonymousPro-Italic.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
 @font-face {
     font-family: 'nerd-mono';
-    src: url('../../../src/fonts/AnonymousPro-Bold.ttf') format('truetype');
+    src: url('../src/fonts/AnonymousPro-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
 @font-face {
     font-family: 'nerd-mono';
-    src: url('../../../src/fonts/AnonymousPro-Bold.ttf') format('truetype');
+    src: url('../src/fonts/AnonymousPro-Bold.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
 
 body {
     font-family: nerd-mono;
-    line-height: 1;
+    line-height: 1.2;
     background-color: #2E3440;
     color: #ECEFF4;
     display: flex;
@@ -42,9 +42,9 @@ hr {
 }
 
 #terminal {
-    width: 90vw;
-    height: calc(100vh - 100px);
-    margin: 25px 45px 45px 25px;
+    width: 95vw;
+    height: calc(100vh - 50px);
+    margin: 20px 45px 50px 50px;
     min-width: 325px;
     border: 2px solid #4C566A;
     border-radius: 9px;
@@ -55,8 +55,8 @@ hr {
     margin-top: 0px;
     background-color: #2E3440;
     border-radius: 10px;
-    padding: 25px 50px;
-    height: calc(100% - 55px);
+    padding: 3px 10px;
+    height: calc(100% - 10px);
     overflow: auto;
     overflow-y: auto;
     font-size: 14px;
@@ -65,7 +65,7 @@ hr {
 #output {
     overflow-y: auto;
     padding-bottom: 0px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 #input-container {
@@ -76,20 +76,25 @@ hr {
 .text-container {
     background-color: #2E3440;
     font-family: nerd-mono;
-    font-size: 15px;
+    font-size: 14px;
     color: #efefeb;
     width: 370px;
     outline: none;
     border: none;
-    margin-top: 0px;
+    margin-top: -0.5px;
+    margin-left: 1px;
 }
 
 /* text next to text area */
 #input-container span {
-    font-size: 15px;
-    padding-top: 1px;
-    margin-right: 1px;
-    color: #4C566A;
+    font-size: 14px;
+    padding-top: -0.6px;
+    margin-right: -3px;
+    color: #EC8663;
+}
+
+#user {
+    padding-right: 3px;
 }
 
 /* Brighter text*/
@@ -100,6 +105,10 @@ hr {
 /* Darker text*/
 .color2{ 
     color: #4C566A;
+}
+
+.color3 {
+    color: #EC8663;
 }
 
 /* PHONE LAYOUT */
