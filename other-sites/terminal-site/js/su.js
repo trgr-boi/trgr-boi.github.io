@@ -8,7 +8,7 @@ function suTuur() {
 
 function suLiefje() {
     setUsername("liefje");
-    correctPassword = ""
+    correctPassword = "Miss-Phawa"
     loginPassword(correctPassword);
 }
 

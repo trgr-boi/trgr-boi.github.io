@@ -10,8 +10,6 @@ function commandsMail(command) {
 
     if (baseCommand === 'mail' && args === null && index === null) {
         mailStart();
-    } else if (args === '-o') { 
-        mailOverview();
     } else if (args === '-h') {
         mailHelp();
     } else if (args === '-s') {
@@ -44,11 +42,7 @@ async function mailStart() {
     appendOutput("Welcome to LMC (Liefje Mail Client)<br>use '");
     appendOutput('mail -h', 'color1');
     appendOutput("' for help<br><br>");
-}
 
-async function mailOverview() {
-    const masterData = await fetchJSON('json/mail.json');
-   
     appendOutput("There are " + masterData.mail.length + " mails.<br>");
     for (let i = 0; i < masterData.mail.length; i++) {
         appendOutput(i+1 + ") " + masterData.mail[i].name + " | " +  masterData.mail[i].date + "<br>");
@@ -67,8 +61,6 @@ async function mailShow(i) {
 function mailHelp() {
     appendOutput("mail [args] [index]", 'color1');
     appendOutput(" - LMC (Liefje Mail Client)<br><br>");
-    appendOutput("-o", 'color1');
-    appendOutput(" - show Overview of mails<br>");
     appendOutput("-s [index]", 'color1');
     appendOutput(" - Show mail (select with index)<br><br>")
 }

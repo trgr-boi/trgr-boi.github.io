@@ -1,15 +1,9 @@
 function commandsLiefje(command) {
 
-    if (command === 'help -p') {
-        showHelpLiefje();
-    } else if (command === 'liefje-zien') {
-        showCountdown();
-    } else if (command.startsWith('mail')) {
-        commandsMail(command);
-    } else
-    {
-       unknownCommand(command);
-    }
+    if (command === 'help -p') { showHelpLiefje(); } 
+    else if (command === 'liefje-zien') { showCountdown(); }
+    else if (command.startsWith('mail')) { commandsMail(command); } 
+    else { unknownCommand(command); }
 }
 
 function showHelpLiefje() {
