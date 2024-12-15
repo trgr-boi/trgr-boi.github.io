@@ -2,36 +2,25 @@ function handleCommand(inputCommand) {
     
     const command = inputCommand.toLowerCase();
 
-    if (command === 'help') {
-        showHelp();
-    } else if (command === 'about') {
-        showAbout();
-    } else if (command === 'whoami') {
-        showWhoami();
-    } else if (command === 'clear') {
-        clearOutput();
-    } else if (command === 'music') {
-        window.location.href = 'music.html';
-    } else if (command === 'files') {
-        showFiles();
-    } else if (command === 'depo') {
-        window.open('https://github.com/trgr-boi');
-    } else if (command === 'su tuur') { // LOGIN TUUR
+    if (command === 'help') { showHelp(); }
+    else if (command === 'about') { showAbout(); } 
+    else if (command === 'whoami') { showWhoami(); } 
+    else if (command === 'clear') { clearOutput(); } 
+    else if (command === 'music') { window.location.href = 'music.html'; } 
+    else if (command === 'files') { showFiles(); } 
+    else if (command === 'depo') { window.open('https://github.com/trgr-boi'); } 
+    else if (command === 'su tuur') { // LOGIN TUUR
         if (username === 'tuur') { appendOutput("Already logged in.<br>") } 
         else { suTuur(); }
-    } else if (command === 'su liefje') { // LOGIN LIEFJE
+    } 
+    else if (command === 'su liefje') { // LOGIN LIEFJE
         if (username === 'liefje') { appendOutput("Already logged in.<br>") } 
         else { suLiefje(); }
-    } else if (command === 'exit') {  // LOGOUT
-        suLogout();
-    } else if (username === 'tuur') {
-        commandsTuur(command);
-    } else if (username === 'liefje') {
-        commandsLiefje(command);
-    } else
-    {
-       unknownCommand(command);
-    }
+    } 
+    else if (command === 'exit') {  /* LOGOUT */ suLogout(); } 
+    else if (username === 'tuur') { commandsTuur(command); } 
+    else if (username === 'liefje') { commandsLiefje(command); } 
+    else { unknownCommand(command); }
 }
 
 function unknownCommand(command) {
