@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>TRGR - Notes</title>
+    <link rel="stylesheet" href="src/css/fonts.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/note-style.css">
+</head>
+<body>
+    <header>
+        <button id="toggleDisplayBtn" class="menu-toggle">N</button>
+        <h3><b>TRGR - Notes</b></h3>
+        <button onclick="toggleTheme()" class="theme-toggle">T</button>
+    </header>
+    <section>
+        <nav>
+            <h3>Other places</h3>
+            <hr>
+            <a href="../main-site/index.html" class="link"><p>Home.md</p></a>
+        
+            <h3>Notes</h3>
+            <hr>
+            <a href="#" onclick="loadContent('doelen.html')" class="link"><p>Het Belang Van Doelen</p></a>
+            <p class="noteDate">—> 02-02-2025</p>
+            <a href="#" onclick="loadContent('rice.html')" class="link"><p>My 1st rice</p></a>
+            <p class="noteDate">—> 01-02-2025</p>
+            <a href="#" onclick="loadContent('testNote.html')" class="link"><p>TestNote</p></a>
+            <p class="noteDate">—> 23-99-1849</p>
+            <a href="#" onclick="loadContent('zelfschets.html')" class="link"><p>De zelfschets als metafoor</p></a>
+            <p class="noteDate">—> 20-01-2025</p>
+            <a href="#" onclick="loadContent('streaming.html')" class="link"><p>streaming music rant</p></a>
+            <p class="noteDate">—> 15-07-2024</p>
+           <!-- TEMPLATE
+            <a href="#" onclick="loadContent('naamNote.html')" class="link"><p>NoteName</p></a>
+            <p class="noteDate">—> dd-mm-yyyy</p>
+            -->
+            
+        </nav>
+        <main id="content">
+            <!-- Content loaded here -->
+        </main>
+        
+    </section>
+</body>
+<script src="src/js/theme.js"></script>
+<script src="src/js/change-page.js"></script>
+<script src="src/js/menu.js"></script>
+<script src="src/js/shortcuts.js"></script>
+</html>
