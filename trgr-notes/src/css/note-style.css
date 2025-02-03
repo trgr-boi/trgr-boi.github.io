@@ -3,14 +3,7 @@
     max-width: 720px;
     margin: 0 auto;
     
-    .link {
-        color: var(--foreground-color);
-    }
-    .link:hover {
-        text-decoration: none;
-        color: var(--background-color);
-        background-color: var(--foreground-color);
-    }
+
 
     > h1 {
         font-size: 30px;
