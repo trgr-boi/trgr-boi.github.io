@@ -4,25 +4,30 @@ function handleCommand(inputCommand) {
     
     const command = inputCommand.toLowerCase();
 
-    if (command === 'help') { showHelp(); }
-    else if (command === 'about') { showAbout(); } 
-    else if (command === 'whoami') { showWhoami(); } 
-    else if (command === 'clear') { clearOutput(); } 
-    else if (command === 'music') { window.location.href = 'music.html'; } 
-    else if (command === 'files') { showFiles(); } 
-    else if (command === 'depo') { window.open('https://github.com/trgr-boi'); } 
-    else if (command === 'su tuur') { // LOGIN TUUR
-        if (username === 'tuur') { appendOutput("Already logged in.<br>") } 
-        else { suTuur(); }
-    } 
-    else if (command === 'su liefje') { // LOGIN LIEFJE
-        if (username === 'liefje') { appendOutput("Already logged in.<br>") } 
-        else { suLiefje(); }
-    } 
-    else if (command === 'exit') {  /* LOGOUT */ suLogout(); } 
-    else if (username === 'tuur') { commandsTuur(command); } 
-    else if (username === 'liefje') { commandsLiefje(command); } 
-    else { unknownCommand(command); }
+    if (command.startsWith('su ')) {
+        const user = command.split(' ')[1];
+        su(user);
+    } else
+    switch (command) {
+        case 'help': showHelp(); break;
+        case 'about': showAbout(); break;
+        case 'whoami': showWhoami(); break;
+        case 'clear': clearOutput(); break;
+        case 'shutdown': window.location.href = '../main-site/index.html'; break;
+        case 'files': showFiles(); break;
+        case 'depo': window.open('https://github.com/trgr-boi'); break;
+        case 'exit': // LOGOUT 
+            suLogout(); break;
+        default:
+            if (username === 'tuur') {
+                commandsTuur(command);
+            } else if (username === 'liefje') {
+                commandsLiefje(command);
+            } else {
+                unknownCommand(command);
+            }
+            break;
+    }
 }
 
 function unknownCommand(command) {
@@ -46,7 +51,9 @@ function showHelp() {
     appendOutput('help', 'color1');
     appendOutput(' - You clearly know how to use this.<br>');
     appendOutput('clear', 'color1');
-    appendOutput(' - clear the terminal.<br>')
+    appendOutput(' - clear the terminal.<br><br>')
+    appendOutput('shutdown', 'color1');
+    appendOutput(' - go back to main site.<br>');
 }
 
 function showAbout() {

@@ -1,5 +1,12 @@
 var correctPassword;
 
+function su(user) {
+    switch (user) {
+        case 'tuur': suTuur(); break;
+        case 'liefje': suLiefje(); break;
+        default: appendOutput("Unknown user: " + user + "<br>");
+    }
+}
 function suTuur() {
     setUsername("tuur");
     correctPassword = "test"
