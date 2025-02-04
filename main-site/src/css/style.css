@@ -131,7 +131,7 @@ main {
     }
     > .start {
         max-width: 720px;
-        line-height: 20px;
+        text-align: center;
     }
 
 }
