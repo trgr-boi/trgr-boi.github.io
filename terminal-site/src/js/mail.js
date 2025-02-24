@@ -42,7 +42,9 @@ async function mailStart() {
 
     appendOutput("Welcome to LMC (Liefje Mail Client)<br>use '");
     appendOutput("mail -h", "color1");
-    appendOutput("' for help<br><br>");
+    appendOutput("' for help<br>'");
+    appendOutput("mail -s [index]", "color1");
+    appendOutput("' to open a mail.<br><br>");
 
     appendOutput("There are " + masterData.mail.length + " mails.<br>");
     for (let i = 0; i < masterData.mail.length; i++) {
