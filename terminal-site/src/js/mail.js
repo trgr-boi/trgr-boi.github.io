@@ -18,24 +18,6 @@ function commandsMail(command) {
         unknownCommand(command);
     }
 }
-// fetch JSON data
-async function fetchJSON(fileName) {
-    try {
-        const response = await fetch(fileName);
-
-        // check if the request was successful
-        if (!response.ok) {
-            throw new Error(
-                "Network response was not ok " + response.statusText
-            );
-        }
-
-        // parse the JSON data
-        return await response.json();
-    } catch (error) {
-        console.error("Error fetching JSON:", error);
-    }
-}
 
 async function mailStart() {
     const masterData = await fetchJSON("src/json/mail.json");
