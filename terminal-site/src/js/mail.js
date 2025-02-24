@@ -70,6 +70,6 @@ async function mailShow(i) {
 function mailHelp() {
     appendOutput("mail [args] [index]", "color1");
     appendOutput(" - LMC (Liefje Mail Client)<br><br>");
-    appendOutput("-s [index]", "color1");
+    appendOutput("mail -s [index]", "color1");
     appendOutput(" - Show mail (select with index)<br><br>");
 }
