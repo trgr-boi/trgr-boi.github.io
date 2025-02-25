@@ -8,13 +8,15 @@ async function showFiles() {
 
 async function concat(filename) {
     const masterData = await fetchJSON("src/json/files.json");
+    const succes = false;
     for (const file of masterData[username]) {
         let { name } = file;
         if (name === filename) {
             let { text } = file;
             appendOutput(text + "<br>");
+            succes = true;
             break;
         }
     }
-    appendOutput("File '" + filename + "' does not exist...<br>");
+    if (!succes) appendOutput("File '" + filename + "' does not exist...<br>");
 }
