@@ -10,6 +10,12 @@ function commandsLiefje(command) {
     }
 }
 
+function suLiefje() {
+    setUsername("liefje");
+    correctPassword = "Miss-Phawa";
+    loginPassword(correctPassword);
+}
+
 function showHelpLiefje() {
     appendOutput("Available commands:<br>");
     appendOutput("liefje-zien", "color1");
@@ -19,16 +25,18 @@ function showHelpLiefje() {
 }
 
 function showCountdown() {
-    const targetDate = new Date(2024, 11, 18);
+    const targetDate = new Date(2025, 3, 18);
     const currentDate = new Date();
 
     // Calculate the difference in days
     const timeDiff = targetDate.getTime() - currentDate.getTime();
+
     const daysRemaining = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
 
     if (daysRemaining <= 0) {
         appendOutput("The target date has already passed or is today!<br>");
     } else {
         appendOutput(`Nog ${daysRemaining} dagen en ik zie liefje!!!<br>`);
+        appendOutput("Dit klopt niet maar snap niet waarom :(");
     }
 }

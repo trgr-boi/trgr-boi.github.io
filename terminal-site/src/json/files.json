@@ -1,22 +1,36 @@
 {
     "azerty": [
         {
-            "name": "readme.txt",
-            "text": "README.txt<br><br>Welcome to My Project!<br>======================<br><br>This project is a simple demonstration of file handling in JavaScript.<br>It includes various features such as reading and displaying text content.<br><br>Files:<br>------<br>- README.txt -> This file, providing an overview of the project.<br>- config.json -> Contains configuration settings.<br>- data.txt -> Stores sample data used in the program.<br><br>Usage:<br>------<br>1. Open the application.<br>2. Select a file to view its content.<br>3. If the file exists, its content will be displayed.<br>4. If the file does not exist, an error message will appear.<br><br>Contact:<br>--------<br>For questions or feedback, feel free to reach out.<br><br>Happy coding!"
+            "name": "documents/diary.txt",
+            "text": "diary.txt example:<br>TEST..."
         },
         {
-            "name": "test.txt",
-            "text": "test.txt<br><br>This is a test file.<br>It contains sample text to demonstrate file handling.<br><br>Features:<br>---------<br>- This file can be read by the program.<br>- It helps test how the application handles different files.<br>- It ensures that file selection and output work correctly.<br><br>Instructions:<br>------------<br>1. Open the application.<br>2. Select `test.txt` to view its content.<br>3. The text inside should be displayed properly.<br><br>"
+            "name": "documents/readme.txt",
+            "text": "readme.txt exmaple:<br>TEST..."
         },
         {
-            "name": "no.pdf",
-            "text": "<</Type/Page/Parent 2 0 R/Resources<</ExtGState<</GS5 5 0 R/GS12 12 0 R>>/XObject<</Meta6 6 0 R/Image7 7 0 R/Image8 8 0 R>>/Font<</F1 10 0 R/F2 13 0 R>>/ProcSet[/PDF/Text/ImageB/ImageC/ImageI] >>/MediaBox[ 0 0 720 405] /Contents 4 0 R/Group<</Type/Group/S/Transparency/CS/DeviceRGB>>/Tabs/S/StructParents 0>> endobj 4 0 obj <</Filter/FlateDecode/Length 420>> stream x<9C><B5><92>AO<C2>0^T<C7><EF>K<F6>^]<DE>^QH<E8>^<DB><D7>v<89>^H^RT^R^MK<^X^O<93>l^KQ<A6>^B^W<BF><BD>os<C2>^Gu<97>fM<F3><FF><FD><FA>^?^M<CE>V<9B>E<96><CC>70<98><9E>Û<EF>!<A0>@<FE>i<<8C>^F<A7>^P^H^M<AC>R߻<EB>@<E1>{<C1>xf _<FB><9E><84>|wZ<A3><91><E1><DE><E9><AC><E3>{<B7><BE>^G#<8E>^M<F6> <DB>^D<A6>Y<A9>E(A<85>B[^GΈ0 <81>^T/<B2><C1><94>^B^MI@<E8>~<D2>^P<9D>!&<9B><C8>8     <FB>^Y<F3>%;N<D3>Mba<F8>^B<B7>^M<E1>J^E<82>^H<D8><EF><C3>`X<DF>:*<93>^Uh<8A>^D<A3>td<B3>yU<AC><8E><D4>><A1><8E><94><FE>J<A8>^D&<CB>$O]m<F0>^C,<A2>S<D1>g<BE>T ^]^XBA<DC>^D<92><E0><9B><EE>L<EA>}<AE><BD>*<BA>j<84>,Q^Sg<AF>I<B1>%<AB><E0>:)rh^U<CF><DD><C1><A8>}D<E3><C0><D4>^G1<A7>_p/^V⬜}i<C0><BF><BA><E5><EA><89><CA>%^<96>E<E6>U<E5>RU<9D>#<8C>}<EF><BE>5{_o<D2>%<B4>^_ <BE><F4><BD>Q<BC>{^Z<DF><FC><F4><AF><FD>^D*:舲<9C><E1>ֱ6<F9><A2>H<DB>]<DD>JW^K&_'mj=<8A>Ӧ<F4>+S~hJ<A0>=h*5 <ED>~<98>^-<E6>O<A7><B5><CC><DF>k^Q<A2>P<EE><98>V<F7><B4><93><FD>^G'<A9><84><D5>ǜ^<B2><EC><D0>^D?^@s<EA>^F<C2> endstream endobj 5 0 obj <</Type/ExtGState/BM/Normal/ca 1>> endobj 6 0 obj <</Type/XObject/Subtype/Form/BBox[ 0 0 837.35 472.28] /Matrix[ 0.085985 0 0 0.15245 0 0] /Filter/FlateDecode/Length 1099>> stream x<9C><B5>VI<8E>#9^L<BC>^WP^?<D0>y<80>&<C4>E<DB>3<E6>4^O(`<A6>^Ov^C<FD><FF>K^G))3<CB>Y<C7>)<C0><80>M<8A>^T<83><C1>E<FE><FD><FE><F6>;>^?<C7>^G?r<B2>&$==<FD><F7><8F>L<D5>t<F4><F4>x^?<EB<EB><DA>hԯT<CB>^C<8A>^?<FE>J<BF><DC><EF><BF><F7>7^Q#<B3>dՈ<9B><DF><F6>Y<F1>8^TR<8C>Fq^EW<A1><AC>w<85>j<A5>^R.<AD><9E><DC>^U^W^W<A3>R<BE>P<9C>a<97><CB>M<A1><BD><C0><F2>^Z<F6>Uq<83>~*~<BE><BF><FD><FB>?Qx0<A8><B9>^R2<A9><9D>F^P<F8>Iv^P<BD>SI<D2>:<A9>^?^YՑd0)(^D<B0>jIs<A3><AE><E9>^C<B6>࣌<A4><8E><9B><93><D8> <83>dJY^N<A9>*<F5><B0>]r7<BF>~:ZVb<DE><F7>^Z^O^O<E6><B6>3<AC><A1> <8C><E8><81><C8><E0>^OV&+<DD>I<84><A9><8A>:^X<AB>HXv<E3>Ȼ t<89><A3>^Pܴ^C<F7>X<B2>!<89>ֶ<9F>I!^<97>k^M^W<F1><8E>i^E<B5><DC>h<AC>V<EF><81>^S<AC><F9>53^Q<EB>^B<AF><99><E2><FA><BD><D3>_<E2><E4><C6>^Vi뺓<D3>^Yl1>a<AC>b,<90><AB>Tn:s<90>^B(ie<B7>Zt<E5><BE>$O~2<B3><8F>'k<CB><F3><DA>^A^_<D1>u:<8A><C5><EC>^M<F9>|U<<62A/p%C<A3><E5>A<BD>ŵ<DE><C0><98><8E><EE><F3>^D<A2>%<80><82>,O<D9>8<AA>.B<8A><E3><C1>Œ^N<A2><96><DC> M<96><DD>^Q33<F4><B8>w^T<CA><   <88><B0><96><8D>rO^K<92>^AcFV^S<B1>^A`^^<B3><FC><B8>^D<C7><C2>^A^<F3><A9>.)^U>ZeJn I=<8E><AD>P<AD><87>+<86><8B><AF>^WKt͎^K<A3><A6><B2>3<D8>ug<A4>H@<DA>Jv^K<9B><89>-O<9E><B6><E3><E4>p<DF>{P<BC>® ,H<AB>:^S<F0><AA>]<F4>B<A4><E3>u7<DC>1SU^G|0<B1>$7<9E>D<ED><E3>I<E2>v<FD><D4>^U^_߳<B0><B8>d<EA>%1<AB><E7><F2>|U<F8><CA><F2><E9>ӻB*u|<F9><AA><C5>8        '<EE>Ľ&n<8D>^L<E6>T<C1>$W<F0><<DA>SC<B5>$<CA><C9>Vc<F5>Qɵ%<D6><EC>=<97><E1><C8><EC>AA<D6>)<C2>|()~mMC<C3>xK<82>DфY<CE> ^O}<8B>Έ^^DYjB<91><D4><DF>^W<A3>V@&Ư^V7<EA><A8>%<AA><DD><D6>bAo<97><9E><EA>^@<FF><C3><D9>ʭd<9<96><84>u<C8>x7N^E<E7><EE><E4><C1>墓^Q<CB>n<DE><C1><D6>}î^P#<89>Xʁ^@Уy`<A4>`   U<AD><81>]<81>ݹ^<B1><99><B0><94>^Y7^Kh<E6><9A>`<C4>8el^]<B8>x<A3>ɖ<9C>D<AD><C7>YAY<B0><A5><FC>Ʉ<84>t0^W<82><D5>5<A6>%<B6>%l3<F6>^]p<8E>F^N^W<E5>B<85><C3>^Humcmen<D9>ۃѿ`<C4><EB> <90>^%Ą<B0>b[<83>G,<B2><E6><95>^Z^NiI<EE><8C>^P6<B6>^B<DB>2^C?c<D8>Pl<F4>xFA^X<E4>[<EC>@0<84>}<CE>s<D8>|K<U+0088><A5><B9>rK^G<E9>K^A<E8><86>*<E3>Q<87>^Q<AE>g <C5><EB><E2>L`^?<E7><B9<B9>W<D0><DF>^Y<ED>^Q<BB><D6>^R^R<CB>`^Z<F0><87>D]3<8A><84><94><BA><84><F1><C0>K^@<92> <8A><83><87><87><C1>^Fց?I<E8>^OF/<A3>/<97>^T<8C>g/<EA>><B6>웱x<CA><C8>rN<8C>wcdw<9B><A0>o<F9><A3>1<<BB><84>P^Y<80><9E><AF><8A>ǡ0T^^<C8>}n<81>ڗ<F2><AB><C2>[<AE><F2><C5><E5><A6>`0<DD><<E3>_<95><8C><EE>/<FA>]<E1><AB><F2>^Z<F6><A6>^@<FF>*<E3><E2>rSܠ<9F><8A><EF>`<B0>*<98>ع>_<E4>ǖO<B6><8A><FF><B5><BC><D2>gXN^R;<AB><D7>S<BE><9C>k,<82><9B><E2>^La]<FD><DF><C8>!^W^?^M|<E3<E3>^H<CD>ͺ^T<AF><A0>N<F9>[<88><C1><C4>p<BD>2<F3>I<F1>8^T<8C>^?W5<BA>^@^S<E4><FB><F0><A6>8so-6<D3>Mq<BA>8<A2><F2><85><E2>^V<F6><8B><EC><F1><F9>^C~<DC>m<F5> endstream endobj 7 0 obj<br>"
+            "name": "downloads/cat.png",
+            "text": "cat.png example:<br>TEST..."
+        },
+        {
+            "name": "system/login.log",
+            "text": "login.log example:<br>TEST..."
+        },
+        {
+            "name": "system/users.log",
+            "text": "system/users.log"
         }
     ],
     "tuur": [
         {
             "name": "readme.txt",
             "text": "README.txt<br><br>Welcome to User's Project!<br>======================<br><br>This project is designed for testing purposes.<br>It contains random data, code snippets, and other useful resources.<br><br>Files:<br>------<br>- README.txt -> This file, providing an overview of the project.<br>- sample_code.js -> Contains JavaScript code examples.<br>- data.csv -> Stores some sample data used for testing.<br><br>Usage:<br>------<br>1. Clone the repository.<br>2. Run the provided scripts to test the functionality.<br>3. Explore the code and make modifications as needed.<br><br>Contact:<br>--------<br>If you have any questions or issues, please reach out via email or open an issue in the repository.<br><br>Enjoy!"
+        }
+    ],
+    "guest": [
+        {
+            "name": "pssst.txt",
+            "text": "You don’t need to know who I am.<br>There are a lot of users on this system and I managed to get into one.<br>The username is ‘azerty’ and the password is the other keyboard layout! If you can’t figure this out, it isn’t meant for you...<br>I think I found some leaks in the system files. Not all of them are encrypted correctly. You’ll probably find them too. I trust in you.<br>(Remember that passwords are case sensitive!)<br>See you soon.<br>- mouse"
         }
     ]
 }

@@ -4,6 +4,9 @@ function handleCommand(inputCommand) {
     if (command.startsWith("su ")) {
         const user = command.split(" ")[1];
         su(user);
+    } else if (command.startsWith("cat ")) {
+        const file = command.split(" ")[1];
+        concat(file);
     } else
         switch (command) {
             case "help":
@@ -21,7 +24,7 @@ function handleCommand(inputCommand) {
             case "shutdown":
                 window.location.href = "../main-site/index.html";
                 break;
-            case "files":
+            case "ls":
                 showFiles();
                 break;
             case "depo":
@@ -47,22 +50,28 @@ function unknownCommand(command) {
 
 function showHelp() {
     appendOutput("Available commands:<br><br>");
+    appendOutput("Showcase:<br> │ ");
     appendOutput("about", "color1");
-    appendOutput(" - find out more about this.<br>");
+    appendOutput(" - find out more about this.<br>│ ");
     appendOutput("whoami", "color1");
-    appendOutput(" - Who even am I?<br>");
+    appendOutput(" - Who even am I?<br>│ ");
     appendOutput("depo", "color1");
     appendOutput(" - go to Github page.<br>");
-    appendOutput("files", "color1");
-    appendOutput(" - look trough files.<br><br>");
+    appendOutput("Files:<br>│ ");
+    appendOutput("ls", "color1");
+    appendOutput(" - lists files in user directory.<br>│ ");
+    appendOutput("cat [file]", "color1");
+    appendOutput(" - prints the file.<br>");
+    appendOutput("Users:<br>│ ");
     appendOutput("su [user]", "color1");
-    appendOutput(" - still in the making.<br>");
+    appendOutput(" - still in the making.<br>│ ");
     appendOutput("exit", "color1");
-    appendOutput(" - Log out of session.<br><br>");
+    appendOutput(" - Log out of session.<br>");
+    appendOutput("System:<br>│ ");
     appendOutput("help", "color1");
-    appendOutput(" - You clearly know how to use this.<br>");
+    appendOutput(" - You clearly know how to use this.<br>│ ");
     appendOutput("clear", "color1");
-    appendOutput(" - clear the terminal.<br><br>");
+    appendOutput(" - clear the terminal.<br>│ ");
     appendOutput("shutdown", "color1");
     appendOutput(" - go back to main site.<br>");
 }
@@ -73,20 +82,15 @@ function showAbout() {
     appendOutput(
         "There is something about the simplicity of text. Only Text. The essentialism in displaying data. Even graphics are made with text elements. A conversion from visual perception without dataloss caused by imagination.<br>"
     );
-    appendOutput("Or is language the purest form of imagination?<br><br>");
+    appendOutput(
+        "Or is text and therefor language the purest form of imagination?<br><br>"
+    );
     appendOutput("You are only here for test reasons...<br>", "color1");
     appendOutput("Explore further.<br>");
 }
 
 function showWhoami() {
     appendOutput("Are you asking me or yourself?<br><br>");
-    appendOutput("I am a simple living and learning creature.<br>");
-    appendOutput("I go by the name trgr on here. <br><br>");
-    appendOutput("I don't fully know about it all... <br>");
-}
-
-function showFiles() {
-    appendOutput("Files are still uploading...<br>Try again later.<br>");
 }
 
 function clearOutput() {

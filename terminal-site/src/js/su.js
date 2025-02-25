@@ -15,22 +15,6 @@ function su(user) {
             appendOutput("Unknown user: " + user + "<br>");
     }
 }
-function suTuur() {
-    setUsername("tuur");
-    correctPassword = "test";
-    loginPassword(correctPassword);
-}
-
-function suLiefje() {
-    setUsername("liefje");
-    correctPassword = "Miss-Phawa";
-    loginPassword(correctPassword);
-}
-function suAzerty() {
-    setUsername("azerty");
-    correctPassword = "qwerty";
-    loginPassword(correctPassword);
-}
 
 function suLogout() {
     appendOutput("Logging out of " + username + "<br>");
