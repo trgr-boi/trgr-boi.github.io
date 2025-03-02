@@ -64,7 +64,7 @@ function showHelp() {
     appendOutput(" - prints the file.<br>");
     appendOutput("Users:<br>│ ");
     appendOutput("su [user]", "color1");
-    appendOutput(" - still in the making.<br>│ ");
+    appendOutput(" - Switch user<br>│ ");
     appendOutput("exit", "color1");
     appendOutput(" - Log out of session.<br>");
     appendOutput("System:<br>│ ");

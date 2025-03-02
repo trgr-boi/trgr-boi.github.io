@@ -62,6 +62,7 @@ function executeCommand(command) {
     commandHistory.push(command);
     historyIndex = commandHistory.length;
     handleCommand(command);
+    console.log(commandHistory);
 }
 
 function startText() {
