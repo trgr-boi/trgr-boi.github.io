@@ -1,19 +1,20 @@
-var correctPassword;
+async function su(userinput) {
+    const masterData = await fetchJSON("src/json/users.json");
+    // console.log(masterData);
 
-function su(user) {
-    switch (user) {
-        case "tuur":
-            suTuur();
-            break;
-        case "liefje":
-            suLiefje();
-            break;
-        case "azerty":
-            suAzerty();
-            break;
-        default:
-            appendOutput("Unknown user: " + user + "<br>");
+    for (const user of masterData.users) {
+        const { username } = user;
+        // console.log(username);
+        // console.log(correctPassword);
+
+        if (username === userinput) {
+            const { correctPassword } = user;
+            setUsername(username);
+            loginPassword(correctPassword);
+            return;
+        }
     }
+    appendOutput("No user with this username<br>");
 }
 
 function suLogout() {

@@ -10,12 +10,6 @@ function commandsLiefje(command) {
     }
 }
 
-function suLiefje() {
-    setUsername("liefje");
-    correctPassword = "Miss-Phawa";
-    loginPassword(correctPassword);
-}
-
 function showHelpLiefje() {
     appendOutput("Available commands:<br>");
     appendOutput("liefje-zien", "color1");

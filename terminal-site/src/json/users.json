@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "username": "tuur",
+            "correctPassword": "test"
+        },
+        {
+            "username": "liefje",
+            "correctPassword": "Miss-Phawa"
+        },
+        {
+            "username": "azerty",
+            "correctPassword": "qwerty"
+        }
+    ]
+}
