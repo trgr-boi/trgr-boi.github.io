@@ -1,17 +1,17 @@
 /* VARIABLES */
-    :root {
-        --background-color: #1e2021;
-        --foreground-color: #ebdbb2;
+:root {
+    --background-color: #1e2021;
+    --foreground-color: #ebdbb2;
 
-        --border: 2px solid var(--foreground-color);
+    --border: 2px solid var(--foreground-color);
 
-        --spacing-outer: 20px;
-        --spacing-inner: 15px;
-        --spacing-outer-small: 10px;
-        --spacing-inner-small: 7px;
+    --spacing-outer: 20px;
+    --spacing-inner: 15px;
+    --spacing-outer-small: 10px;
+    --spacing-inner-small: 7px;
 
-        --font-size: 20px;
-    }
+    --font-size: 20px;
+}
 
 html {
     height: 100vh;
@@ -31,7 +31,7 @@ body {
     background-color: var(--background-color);
     color: var(--foreground-color);
 
-    font-family: 'pixel';
+    font-family: "pixel";
 }
 
 header {
@@ -52,7 +52,8 @@ header {
         font-size: 24px;
     }
 }
-.theme-toggle, .menu-toggle {
+.theme-toggle,
+.menu-toggle {
     padding: 5px 10px;
     position: absolute;
 
@@ -61,7 +62,7 @@ header {
     color: var(--foreground-color);
     cursor: pointer;
 
-    font-family: 'pixel';
+    font-family: "pixel";
     font-size: 16px;
 }
 .theme-toggle {
@@ -70,7 +71,8 @@ header {
 .menu-toggle {
     left: var(--spacing-inner);
 }
-.theme-toggle:hover, .menu-toggle:hover {
+.theme-toggle:hover,
+.menu-toggle:hover {
     background-color: var(--foreground-color);
     color: var(--background-color);
 }
@@ -80,16 +82,17 @@ section {
     width: calc(100%-40px);
 }
 
-nav, main {
+nav,
+main {
     height: calc(100vh - 170px);
 }
 
 nav {
     flex: 2;
-    
+
     margin-right: var(--spacing-outer);
     padding: var(--spacing-inner);
-    
+
     border: var(--border);
 
     overflow-y: scroll;
@@ -124,7 +127,7 @@ main {
 
     text-align: left;
 
-    font-family: 'nerd';
+    font-family: "nerd";
     font-style: normal;
     font-size: 17px;
 
@@ -136,7 +139,6 @@ main {
     > .start {
         text-align: center;
     }
-
 }
 
 @media screen and (max-width: 820px) {
@@ -167,5 +169,4 @@ main {
             line-height: 6px;
         }
     }
-    
 }

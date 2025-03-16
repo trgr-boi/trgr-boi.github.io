@@ -37,8 +37,6 @@ hr {
     padding: var(--spacing-inner);
     min-width: 325px;
     border: 2px solid var(--foreground-color);
-
-
 }
 
 .text {
@@ -86,13 +84,13 @@ hr {
 }
 
 /* Brighter text*/
-.color1{
+.color1 {
     color: var(--color-red);
 }
 
 /* Darker text*/
-.color2{ 
-    color: #4C566A;
+.color2 {
+    color: #4c566a;
 }
 
 .color3 {
