@@ -23,7 +23,9 @@ function toggleTheme() {
 function loadTheme() {
     const root = document.documentElement;
     const theme = localStorage.getItem("theme");
-    if (theme === "dark") {
+
+    // Default to dark theme if no theme is saved
+    if (theme === "dark" || theme === null) {
         root.style.setProperty("--background-color", "#1e2021");
         root.style.setProperty("--foreground-color", "#ebdbb2");
     } else {
