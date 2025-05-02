@@ -1,0 +1,48 @@
+:root {
+    --background-color: #1e2021;
+    --foreground-color: #ebdbb2;
+
+    --border: 2px solid var(--foreground-color);
+
+    --spacing-outer: 20px;
+    --spacing-inner: 15px;
+    --spacing-outer-small: 10px;
+    --spacing-inner-small: 7px;
+
+    --font-size: 20px;
+}
+
+body {
+    padding: var(--spacing-outer);
+
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+
+    font-family: "nerd";
+
+    text-align: center;
+
+    p {
+        font-size: 20px;
+    }
+    a {
+        color: var(--foreground-color);
+        text-decoration: underline;
+    }
+    a:hover {
+        color: var(--background-color);
+        background-color: var(--foreground-color);
+        text-decoration: none;
+    }
+    > .ascii {
+        text-align: center;
+        white-space: pre;
+        line-height: 5px;
+        font-size: 9px;
+    }
+}
+
+body > hr {
+    margin-top: -15px;
+    color: var(--foreground-color);
+}

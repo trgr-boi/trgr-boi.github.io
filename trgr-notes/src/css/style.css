@@ -1,0 +1,172 @@
+/* VARIABLES */
+:root {
+    --background-color: #1e2021;
+    --foreground-color: #ebdbb2;
+
+    --border: 2px solid var(--foreground-color);
+
+    --spacing-outer: 20px;
+    --spacing-inner: 15px;
+    --spacing-outer-small: 10px;
+    --spacing-inner-small: 7px;
+
+    --font-size: 20px;
+}
+
+html {
+    height: 100vh;
+    width: 100vw;
+
+    margin: 0;
+}
+
+hr {
+    margin-top: -15px;
+    color: var(--foreground-color);
+}
+
+body {
+    padding: var(--spacing-outer);
+
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+
+    font-family: "pixel";
+}
+
+header {
+    width: calc(100%-40px);
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: var(--spacing-outer);
+    padding: var(--spacing-inner);
+    border: var(--border);
+    text-align: center;
+    font-size: var(--font-size);
+
+    > h3 {
+        font-size: 24px;
+    }
+}
+.theme-toggle,
+.menu-toggle {
+    padding: 5px 10px;
+    position: absolute;
+
+    border: var(--border);
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    cursor: pointer;
+
+    font-family: "pixel";
+    font-size: 16px;
+}
+.theme-toggle {
+    right: var(--spacing-inner);
+}
+.menu-toggle {
+    left: var(--spacing-inner);
+}
+.theme-toggle:hover,
+.menu-toggle:hover {
+    background-color: var(--foreground-color);
+    color: var(--background-color);
+}
+
+section {
+    display: flex;
+    width: calc(100%-40px);
+}
+
+nav,
+main {
+    height: calc(100vh - 170px);
+}
+
+nav {
+    flex: 2;
+
+    margin-right: var(--spacing-outer);
+    padding: var(--spacing-inner);
+
+    border: var(--border);
+
+    overflow-y: scroll;
+
+    font-size: var(--font-size);
+
+    > .noteDate {
+        font-size: 17px;
+        margin-top: -20px;
+    }
+    > .link {
+        text-decoration: none;
+        color: var(--foreground-color);
+    }
+    > .link:hover {
+        text-decoration: underline;
+    }
+}
+
+main {
+    flex: 6;
+
+    padding: var(--spacing-inner);
+
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border: var(--border);
+
+    text-align: left;
+
+    font-family: "nerd";
+    font-style: normal;
+    font-size: 17px;
+
+    > .ascii {
+        text-align: left;
+        white-space: pre;
+        line-height: 10px;
+    }
+    > .start {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    body {
+        padding: var(--spacing-outer-small);
+    }
+
+    header {
+        margin-bottom: var(--spacing-outer-small);
+    }
+
+    section {
+        flex-direction: column;
+        height: calc(100vh - 110px);
+    }
+
+    nav {
+        flex: 8;
+        display: block;
+        margin: 10px 0 var(--spacing-outer-small);
+    }
+
+    main {
+        flex: 1;
+        margin-top: var(--spacing-outer-small);
+        > .ascii {
+            font-size: 10px;
+            line-height: 6px;
+        }
+    }
+}
