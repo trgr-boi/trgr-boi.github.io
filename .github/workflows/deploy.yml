@@ -26,6 +26,7 @@ jobs:
               run: |
                   rm -rf .github
                   rm -f .gitignore
+                  rm -f eslint.config.js
 
             - name: Deploy to GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
