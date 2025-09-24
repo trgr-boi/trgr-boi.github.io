@@ -10,7 +10,7 @@
     --spacing-outer-small: 10px;
     --spacing-inner-small: 7px;
 
-    --font-size: 20px;
+    --font-size: 1.5rem;
 }
 
 html {
@@ -35,7 +35,7 @@ body {
 }
 
 header {
-    width: calc(100%-40px);
+    width: calc(100% -40px);
     height: 30px;
 
     display: flex;
@@ -48,10 +48,11 @@ header {
     text-align: center;
     font-size: var(--font-size);
 
-    > h3 {
+    >h3 {
         font-size: 24px;
     }
 }
+
 .theme-toggle,
 .menu-toggle {
     padding: 5px 10px;
@@ -65,12 +66,15 @@ header {
     font-family: "pixel";
     font-size: 16px;
 }
+
 .theme-toggle {
     right: var(--spacing-inner);
 }
+
 .menu-toggle {
     left: var(--spacing-inner);
 }
+
 .theme-toggle:hover,
 .menu-toggle:hover {
     background-color: var(--foreground-color);
@@ -79,7 +83,7 @@ header {
 
 section {
     display: flex;
-    width: calc(100%-40px);
+    width: calc(100% -40px);
 }
 
 nav,
@@ -99,11 +103,12 @@ nav {
 
     font-size: var(--font-size);
 
-    > a {
+    >a {
         text-decoration: none;
         color: var(--foreground-color);
     }
-    > a:hover {
+
+    >a:hover {
         text-decoration: underline;
     }
 }
@@ -127,12 +132,13 @@ main {
     font-style: normal;
     font-size: 17px;
 
-    > .ascii {
+    >.ascii {
         text-align: left;
         white-space: pre;
         line-height: 10px;
     }
-    > .start {
+
+    >.start {
         max-width: 720px;
         text-align: center;
     }
@@ -161,7 +167,8 @@ main {
     main {
         flex: 1;
         margin-top: var(--spacing-outer-small);
-        > .ascii {
+
+        >.ascii {
             font-size: 10px;
             line-height: 6px;
         }
